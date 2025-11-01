@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PauseController : Controller<SceneController>
+public class PauseController : Controller<PauseController>
 {
     public void pauseGame()
     {

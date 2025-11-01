@@ -35,5 +35,6 @@ public class ScoreController : Controller<ScoreController>
     {
         victoryMessage.text = winningPlayer + " wins!";
         endScreen.SetActive(true);
+        PauseController.Instance.pauseGame();
     }
 }

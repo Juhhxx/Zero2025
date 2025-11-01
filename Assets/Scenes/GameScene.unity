@@ -704,6 +704,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &998183808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1210495481351863852, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1148732361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -876,6 +887,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27e9b7c5aba231458259d866f62dade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!1 &1535179408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1837544479238330665, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597238096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1141,6 +1157,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165348570}
     m_Modifications:
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 1535179408}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: victoryMessage
+      value: 
+      objectReference: {fileID: 998183808}
     - target: {fileID: 7899406571033756040, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: m_Name
       value: Score Controller
@@ -1258,6 +1282,14 @@ PrefabInstance:
     - target: {fileID: 1996063204348281344, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659548926412031282, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2004986710}
+    - target: {fileID: 3659548926412031282, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadMainMenuScene
       objectReference: {fileID: 0}
     - target: {fileID: 4330838951160315990, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_Name
@@ -1406,6 +1438,22 @@ PrefabInstance:
     - target: {fileID: 7847561282406202360, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871094416005826383, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2004986710}
+    - target: {fileID: 7871094416005826383, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadGameScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871094416005826383, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871094416005826383, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8219238479357778379, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_AnchorMax.x
