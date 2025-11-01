@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4329927548474744240}
   - component: {fileID: 1440968301693711352}
+  - component: {fileID: 113009527714701102}
   m_Layer: 0
   m_Name: Hurtbox
   m_TagString: Untagged
@@ -68,6 +69,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.04
+--- !u!114 &113009527714701102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3100112094136095420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e501c0e8b6c78b448477ea2d2030623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &4697613182356471716
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _moveSpeed: 2
   _aimPivot: {fileID: 6625482808740547268}
-  _bullerSpawnPoint: {fileID: 2227256663284302097}
+  _bulletSpawnPoint: {fileID: 2227256663284302097}
 --- !u!1 &7538789283841082309
 GameObject:
   m_ObjectHideFlags: 0

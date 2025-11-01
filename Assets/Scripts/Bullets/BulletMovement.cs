@@ -21,7 +21,7 @@ public class BulletMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"VELOCITY : {_rb.linearVelocity}");
+        //Debug.Log($"VELOCITY : {_rb.linearVelocity}");
     }
 
     public void Move(Vector2 direction)
