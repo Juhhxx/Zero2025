@@ -16,6 +16,12 @@ public class BulletMovement : MonoBehaviour
         Debug.Log("SPAWNED BULLET");
         _rb = GetComponent<Rigidbody2D>();
         _controller = GetComponent<BulletController>();
+
+    }
+
+    private void Update()
+    {
+        Debug.Log($"VELOCITY : {_rb.linearVelocity}");
     }
 
     public void Move(Vector2 direction)

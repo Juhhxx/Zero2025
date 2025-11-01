@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
 
-    public static event Action<Vector2,Vector2> OnShootingInputEvent;
+    public event Action<Vector2,Vector2> OnShootingInputEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

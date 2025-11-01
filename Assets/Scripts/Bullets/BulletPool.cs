@@ -31,14 +31,16 @@ public class BulletPool : MonoBehaviour
         return newObject;
     }
 
-    public GameObject SpawnBullet(Vector2 direction)
+    public GameObject SpawnBullet(Vector2 direction, Vector2 position)
     {
         GameObject newBullet = _pool.Pop();
 
+        newBullet.transform.position = position;
+
         BulletMovement bulletMove = newBullet.GetComponent<BulletMovement>();
 
-        bulletMove.Move(direction);
         newBullet.SetActive(true);
+        bulletMove.Move(direction);
 
         return newBullet;
     }
