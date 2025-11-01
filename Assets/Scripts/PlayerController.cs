@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         {
             //                   Pivot Direction, Bullet Spawn Position
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
-            OnShootingInputEvent(shotDirection, _bulletSpawnPoint.position);
+            OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position);
         }
     }
 }

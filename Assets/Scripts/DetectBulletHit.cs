@@ -22,7 +22,7 @@ public class DetectBulletHit : MonoBehaviour
         if (other.GetComponent<BulletController>()!=null)
         {
             Debug.Log(transform.name + " was Hit");
-            OnHitEvent();
+            OnHitEvent?.Invoke();
         }
     }
 }
