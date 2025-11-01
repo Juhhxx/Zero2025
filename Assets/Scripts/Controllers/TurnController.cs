@@ -80,7 +80,7 @@ public class TurnController : Controller<TurnController>
         if(_isDodgingPhaseActive)
         {
             // Count down timer
-            //dodgingPhaseTimer.CountTimer();
+            dodgingPhaseTimer.CountTimer();
 
             // Update timer UI
             timerText.text = "" + (int)dodgingPhaseTimer.CurrentTime;
@@ -122,13 +122,9 @@ public class TurnController : Controller<TurnController>
 
     private void CheckPlayersReady()
     {
-        if (playersReadyAmount >= players.Count)
+        if (++playersReadyAmount >= players.Count)
         {
             StartDodgingPhase();
-        }
-        else
-        {
-            playersReadyAmount++;
         }
     }
 
