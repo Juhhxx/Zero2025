@@ -26,11 +26,14 @@ public class ShotsStack : MonoBehaviour
 
     private List<BulletController> _bulletsFired;
 
+    void Awake()
+    {
+        _bulletsFired = new List<BulletController>();
+    }
+
     private void Start()
     {
         _bulletPool = FindAnyObjectByType<BulletPool>();
-
-        _bulletsFired = new List<BulletController>();
 
         foreach (PlayerController p in _players) p.OnShootingInputEvent += AddShot;
     }
