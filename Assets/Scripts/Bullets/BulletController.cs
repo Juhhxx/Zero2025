@@ -1,5 +1,6 @@
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BulletController : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class BulletController : MonoBehaviour
 
     private SpriteRenderer _spr;
     private Collider2D _collider;
+
+    public UnityEvent OnBulletKill;
+
+    private BulletPool _pool;
+    public void SetPool(BulletPool pool) => _pool = pool;
 
     private void Start()
     {
@@ -35,11 +41,19 @@ public class BulletController : MonoBehaviour
             _collider.isTrigger = true;
         }
     }
-    
+
     private void OnTriggerExit2D(Collider2D other)
     {
         _passes++;
 
         if (_passes == _passesNeeded) _isMaterialized = true;
+    }
+    
+    public void KillBullet()
+    {
+        Debug.Log($"Bullet {name} Destroyed");
+
+        OnBulletKill?.Invoke();
+        _pool.DespawnBullet(gameObject);
     }
 }

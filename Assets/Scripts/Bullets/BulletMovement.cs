@@ -9,11 +9,12 @@ public class BulletMovement : MonoBehaviour
     private int _bounces;
     private Rigidbody2D _rb;
 
-    public UnityEvent OnBulletKill;
+    private BulletController _controller;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _controller = GetComponent<BulletController>();
 
         Move(transform.right);
     }
@@ -26,13 +27,17 @@ public class BulletMovement : MonoBehaviour
         Debug.Log($"MOVE VECTOR : {direction}");
 
         _rb.linearVelocity = direction * _speed;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        _rb.rotation = angle;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_bounces == _maxBounces && _maxBounces > 0)
         {
-            KillBullet();
+            _controller.KillBullet();
             return;
         } 
         
@@ -42,20 +47,8 @@ public class BulletMovement : MonoBehaviour
 
         Debug.LogWarning($"DIRECTION ANGLE {newDir}");
 
-        float angle = Mathf.Atan2(newDir.y, newDir.x) * Mathf.Rad2Deg;
-
-        _rb.rotation = angle;
-
         Move(newDir);
 
         _bounces++;
-    }
-    
-    private void KillBullet()
-    {
-        Debug.Log($"Bullet {name} Destroyed");
-
-        OnBulletKill?.Invoke();
-        Destroy(gameObject);
     }
 }
