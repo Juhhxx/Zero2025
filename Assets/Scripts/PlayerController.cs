@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
-    private bool AllowMovement { get; set; } = true;
+    public bool AllowMovement { get; set; } = true;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
