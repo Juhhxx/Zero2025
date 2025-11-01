@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _Bit_Rate: 150
     - _Swirling_Speed: 0.9
-    - _Vignette_Intensity: 1.14
+    - _Vignette_Intensity: 0.94
     m_Colors:
     - _Color: {r: 0, g: 0.1254902, b: 0.10508337, a: 1}
     - _Color1: {r: 0.16688484, g: 0.00032552253, b: 0, a: 1}

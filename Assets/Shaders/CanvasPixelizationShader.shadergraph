@@ -1386,8 +1386,8 @@
     "m_ObjectId": "0b1b580cea734c3bb8a1580712b31f89",
     "m_Title": "Pixelization",
     "m_Position": {
-        "x": -2257.60009765625,
-        "y": 232.79995727539063
+        "x": -2257.599853515625,
+        "y": 232.7999267578125
     }
 }
 
@@ -1721,8 +1721,8 @@
     "m_ObjectId": "14ee115512b04f7890f42b78e3028435",
     "m_Title": "Swirling",
     "m_Position": {
-        "x": -1375.2000732421875,
-        "y": -294.40008544921877
+        "x": -1375.199951171875,
+        "y": -294.4000244140625
     }
 }
 
@@ -6014,7 +6014,7 @@
     "m_ObjectId": "ac5dae45856c4cbeb83806f35790d149",
     "m_Title": "Emission",
     "m_Position": {
-        "x": -290.4000244140625,
+        "x": -290.3999938964844,
         "y": 1207.199951171875
     }
 }
@@ -6406,7 +6406,7 @@
     "m_PerRendererData": false,
     "m_customAttributes": [],
     "m_Value": {
-        "m_SerializedTexture": "",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"96a9adeb4aac0144c8afadf8b0ac0583\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -6685,8 +6685,8 @@
     "m_ObjectId": "c786e7b12ffe47c89b2caeaa8d442d80",
     "m_Title": "Texture Intensity",
     "m_Position": {
-        "x": 401.5999755859375,
-        "y": 150.39996337890626
+        "x": 401.6000061035156,
+        "y": 150.39990234375
     }
 }
 
@@ -7516,7 +7516,7 @@
     "m_ObjectId": "e3c214f1f245417daf728649aedf6084",
     "m_Title": "Alpha Mask",
     "m_Position": {
-        "x": 8.0,
+        "x": 7.19999885559082,
         "y": 763.9999389648438
     }
 }
@@ -8195,7 +8195,7 @@
     "m_ObjectId": "fe141ef8808f4c0d8774603801ad2047",
     "m_Title": "MainTex",
     "m_Position": {
-        "x": -96.0,
+        "x": -96.79998779296875,
         "y": 139.199951171875
     }
 }
