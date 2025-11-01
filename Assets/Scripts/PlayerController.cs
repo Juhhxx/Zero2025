@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
+    private bool AllowMovement { get; set; } = true;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
@@ -31,7 +32,10 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        _moveInput = context.ReadValue<Vector2>();
+        if(AllowMovement)
+        {
+            _moveInput = context.ReadValue<Vector2>();
+        }
     }
 
     public void Aim(InputAction.CallbackContext context)
