@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 3278c967ec79c714bb28ab98bafcde61
+guid: 158164a0b8718c5428580201b13e89b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2008770159177900807
-    second: Playerbars_0
+      213: -5732586428617421227
+    second: Playerbars 1_0
   - first:
-      213: 3476476425972707325
-    second: Playerbars_1
+      213: -4320471666676559729
+    second: Playerbars 1_1
   - first:
-      213: 1172520521164734124
-    second: Playerbars_2
+      213: -8572859626003751207
+    second: Playerbars 1_2
   - first:
-      213: 6283319891874093677
-    second: Playerbars_3
-  - first:
-      213: 2600157154245480945
-    second: Playerbars_4
-  - first:
-      213: -262951223478246622
-    second: Playerbars_5
+      213: -2669339118307116706
+    second: Playerbars 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -128,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Playerbars_0
+      name: Playerbars 1_0
       rect:
         serializedVersion: 2
         x: 20
@@ -143,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 703243d11d590eb10800000000000000
-      internalID: 2008770159177900807
+      spriteID: 55e88060403c170b0800000000000000
+      internalID: -5732586428617421227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playerbars_1
+      name: Playerbars 1_1
       rect:
         serializedVersion: 2
         x: 73
@@ -165,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dff6f18e3ecee3030800000000000000
-      internalID: 3476476425972707325
+      spriteID: f809a95f8e99a04c0800000000000000
+      internalID: -4320471666676559729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playerbars_2
+      name: Playerbars 1_2
       rect:
         serializedVersion: 2
         x: 352
@@ -187,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cae31e3a331a54010800000000000000
-      internalID: 1172520521164734124
+      spriteID: 9de12c25795170980800000000000000
+      internalID: -8572859626003751207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Playerbars_3
+      name: Playerbars 1_3
       rect:
         serializedVersion: 2
         x: 565
@@ -209,52 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6a1d45b626d23750800000000000000
-      internalID: 6283319891874093677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playerbars_4
-      rect:
-        serializedVersion: 2
-        x: 174
-        y: 32
-        width: 43
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1f11ef2d72d951420800000000000000
-      internalID: 2600157154245480945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Playerbars_5
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 32
-        width: 43
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2232353614fc95cf0800000000000000
-      internalID: -262951223478246622
+      spriteID: e59ff34f63a94fad0800000000000000
+      internalID: -2669339118307116706
       vertices: []
       indices: 
       edges: []
@@ -273,12 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Playerbars_0: 2008770159177900807
-      Playerbars_1: 3476476425972707325
-      Playerbars_2: 1172520521164734124
-      Playerbars_3: 6283319891874093677
-      Playerbars_4: 2600157154245480945
-      Playerbars_5: -262951223478246622
+      Playerbars 1_0: -5732586428617421227
+      Playerbars 1_1: -4320471666676559729
+      Playerbars 1_2: -8572859626003751207
+      Playerbars 1_3: -2669339118307116706
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

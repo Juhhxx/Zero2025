@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClockTimerVignette
-  m_Shader: {fileID: -6465566751694194690, guid: b1ac1a0fb5b71594298114f0d760cf74, type: 3}
+  m_Name: CRTEffect
+  m_Shader: {fileID: -6465566751694194690, guid: 6c7810a045dc6224f95519ca6a8e71de, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,12 +37,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bit_Rate: 150
-    - _Swirling_Speed: 0.9
-    - _Vignette_Intensity: 1.14
+    - _CRT_Scrolling_Speed: 0.05
+    - _Grid_Brightness: 1
+    - _Grid_Distortion_Clamp: 9.5
+    - _Overall_Opacity: 1
+    - _Pixel_Grid_Distortion: 0
+    - _Pixel_Rounded: 0.35
+    - _Pixels_Opacity: 0.251
+    - _Subpixel_Height: 0.9
+    - _Subpixel_Width: 0.306
     m_Colors:
-    - _Color: {r: 0, g: 0.1254902, b: 0.10508337, a: 1}
-    - _Color1: {r: 0.16688484, g: 0.00032552253, b: 0, a: 1}
-    - _Color2: {r: 0.43544778, g: 0, b: 0.019826906, a: 1}
+    - _Color1: {r: 1, g: 0, b: 0, a: 1}
+    - _Color2: {r: 0.03478432, g: 1, b: 0, a: 1}
+    - _Color3: {r: 0, g: 0.11449855, b: 1, a: 1}
+    - _Pixel_Tiling_and_Offset: {r: 94, g: 68, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

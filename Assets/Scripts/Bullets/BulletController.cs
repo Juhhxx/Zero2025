@@ -4,12 +4,13 @@ using UnityEngine.Events;
 
 public class BulletController : MonoBehaviour
 {
+    [SerializeField] private GameObject _ghostBullet;
+    [SerializeField] private GameObject _materializedBullet;
     [SerializeField] private int _passesNeeded;
     private int _passes;
 
     [SerializeField, ReadOnly] private bool _isMaterialized = false;
 
-    private SpriteRenderer _spr;
     private Collider2D _collider;
 
     public UnityEvent OnBulletKill;
@@ -19,7 +20,6 @@ public class BulletController : MonoBehaviour
 
     private void Start()
     {
-        _spr = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
     }
 
@@ -32,12 +32,14 @@ public class BulletController : MonoBehaviour
     {
         if (_isMaterialized)
         {
-            _spr.color = Color.white;
+            _ghostBullet.SetActive(false);
+            _materializedBullet.SetActive(true);
             _collider.isTrigger = false;
         }
         else
         {
-            _spr.color = Color.purple;
+            _ghostBullet.SetActive(true);
+            _materializedBullet.SetActive(false);
             _collider.isTrigger = true;
         }
     }
@@ -47,6 +49,11 @@ public class BulletController : MonoBehaviour
         _passes++;
 
         if (_passes == _passesNeeded) _isMaterialized = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Activate diving particle system
     }
     
     public void KillBullet()
