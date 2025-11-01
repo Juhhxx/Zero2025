@@ -7,11 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
+    [SerializeField] private Transform _bulletSpawnPoint;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
 
-    public static event Action<Vector2> OnShootingInputEvent;
+    public static event Action<Vector2,Vector2> OnShootingInputEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,7 +53,9 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
-            OnShootingInputEvent(_aimDirection);
+            //                   Pivot Direction, Bullet Spawn Position
+            Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
+            OnShootingInputEvent(shotDirection,_bulletSpawnPoint.position);
         }
     }
 }
