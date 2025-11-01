@@ -351,6 +351,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 636275038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &329683402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5670621053338341209, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &522417298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1655,6 +1666,10 @@ PrefabInstance:
       propertyPath: timerFillArea
       value: 
       objectReference: {fileID: 939288144}
+    - target: {fileID: 7552570469221797365, guid: 63ab5ca50583b224dafd7847d462bcf8, type: 3}
+      propertyPath: currentRoundText
+      value: 
+      objectReference: {fileID: 329683402}
     - target: {fileID: 7552570469221797365, guid: 63ab5ca50583b224dafd7847d462bcf8, type: 3}
       propertyPath: dodgingPhaseDuration
       value: 10

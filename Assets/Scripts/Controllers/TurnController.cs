@@ -16,14 +16,15 @@ public class TurnController : Controller<TurnController>
     public TextMeshProUGUI timerText;
     public Image timerFillArea;
     public Timer dodgingPhaseTimer;
+    public TextMeshProUGUI currentRoundText;
 
     [Header("Bullet Variables")]
     public ShotsStack shotsStack;
 
-
     // Misc variables
     private bool _isDodgingPhaseActive;
     private int playersReadyAmount;
+    private int _currentTurn;
     
 
     protected override void Awake()
@@ -79,7 +80,7 @@ public class TurnController : Controller<TurnController>
         if(_isDodgingPhaseActive)
         {
             // Count down timer
-            dodgingPhaseTimer.CountTimer();
+            //dodgingPhaseTimer.CountTimer();
 
             // Update timer UI
             timerText.text = "" + (int)dodgingPhaseTimer.CurrentTime;
@@ -95,6 +96,10 @@ public class TurnController : Controller<TurnController>
         // reset phase timer
         dodgingPhaseTimer.ResetTimer();
 
+        // Update timer UI
+        timerText.text = "" + dodgingPhaseTimer;
+        timerFillArea.fillAmount = 1f;
+
         // disable player movement
         foreach (PlayerController player in players)
         {
@@ -107,6 +112,12 @@ public class TurnController : Controller<TurnController>
         // summon previous player ghosts
 
         // enable current bullet preview
+
+        // update current turn text
+        _currentTurn++;
+        currentRoundText.text = "Current Round: " + _currentTurn.ToString();
+
+        Debug.Log("Started Setup phase");
     }
 
     private void CheckPlayersReady()
@@ -130,7 +141,7 @@ public class TurnController : Controller<TurnController>
         _isDodgingPhaseActive = true;
 
         // enable player movement
-        foreach(PlayerController player in players)
+        foreach (PlayerController player in players)
         {
             player.AllowMovement = true;
         }
@@ -138,6 +149,7 @@ public class TurnController : Controller<TurnController>
         // shoot all bullets
         shotsStack.Shoot();
 
+        Debug.Log("Started Dodging phase");
     }
 
     public void EndTurn(int winningPlayer)
@@ -153,6 +165,12 @@ public class TurnController : Controller<TurnController>
 
         // register player score
         ScoreController.Instance.ScorePointForPlayer(winningPlayer);
+
+        // reset current turn text
+        _currentTurn = 0;
+        currentRoundText.text = "Current Round: " + _currentTurn.ToString();
+
+        Debug.Log("Ended round. " + winningPlayer + " scored");
 
         // start setup phase
         StartSetupPhase();
