@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5894426444813392979}
   - component: {fileID: 4550780755463622212}
   - component: {fileID: 8404167087410912643}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +114,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
   _passesNeeded: 1
   _isMaterialized: 0
+  OnBulletKill:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8404167087410912643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,9 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
   _speed: 5
   _maxBounces: 0
-  OnBulletKill:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4447428009253387594
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6252156505921107231}
   - component: {fileID: 131971084885391261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

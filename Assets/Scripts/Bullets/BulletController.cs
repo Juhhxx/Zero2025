@@ -54,6 +54,8 @@ public class BulletController : MonoBehaviour
         Debug.Log($"Bullet {name} Destroyed");
 
         OnBulletKill?.Invoke();
-        _pool.DespawnBullet(gameObject);
+        _pool?.DespawnBullet(gameObject);
+
+        if (_pool == null) Destroy(gameObject);
     }
 }
