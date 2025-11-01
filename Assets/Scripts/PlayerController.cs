@@ -5,46 +5,46 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
-    [SerializeField] private Transform aimPivot;
-    private Rigidbody2D rb; 
-    private Vector2 moveInput;
-    private Vector2 aimDirection;
+    [SerializeField] private float _moveSpeed;
+    [SerializeField] private Transform _aimPivot;
+    private Rigidbody2D _rb; 
+    private Vector2 _moveInput;
+    private Vector2 _aimDirection;
 
     public static event Action<Vector2> OnShootingInputEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Debug.Log(rb.name);
+        _rb = GetComponent<Rigidbody2D>();
+        Debug.Log(_rb.name);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.linearVelocity = moveInput * moveSpeed;
+        _rb.linearVelocity = _moveInput * _moveSpeed;
         PointInAimDirection();
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        _moveInput = context.ReadValue<Vector2>();
     }
 
     public void Aim(InputAction.CallbackContext context)
     {
-        aimDirection = context.ReadValue<Vector2>();
+        _aimDirection = context.ReadValue<Vector2>();
     }
 
     private void PointInAimDirection()
     {
-        if(aimDirection != Vector2.zero)
+        if(_aimDirection != Vector2.zero)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, aimDirection);
-            Quaternion rotation = Quaternion.RotateTowards(aimPivot.rotation, targetRotation, 100f * Time.deltaTime);
-            aimPivot.rotation = rotation;
+            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _aimDirection);
+            Quaternion rotation = Quaternion.RotateTowards(_aimPivot.rotation, targetRotation, 100f * Time.deltaTime);
+            _aimPivot.rotation = rotation;
         }
     }
 
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
-            OnShootingInputEvent(aimDirection);
+            OnShootingInputEvent(_aimDirection);
         }
     }
 }
