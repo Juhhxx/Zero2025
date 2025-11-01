@@ -33,7 +33,10 @@ public class BulletPool : MonoBehaviour
 
     public GameObject SpawnBullet(Vector2 direction, Vector2 position)
     {
-        GameObject newBullet = _pool.Pop();
+        GameObject newBullet;
+
+        if (_pool.Count > 0) newBullet = _pool.Pop();
+        else newBullet = CreateObject();
 
         newBullet.transform.position = position;
 
@@ -48,7 +51,7 @@ public class BulletPool : MonoBehaviour
     public void DespawnBullet(GameObject bullet)
     {
         if (_pool.Contains(bullet)) return;
-        
+
         _pool.Push(bullet);
         bullet.SetActive(false);
     }
