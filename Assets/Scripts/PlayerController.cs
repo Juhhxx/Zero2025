@@ -8,7 +8,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
-    public bool AllowMovement { get; set; } = true;
+    private bool _allowMovement = true;
+    public bool AllowMovement
+    {
+        get => _allowMovement;
+        set
+        {   
+            //this resets the bullet when we go back to planning phase
+            //Probably not the best way to do this
+            if (!value)
+                _hasBullet = true;
+            _allowMovement = value;
+        } 
+    }
+    private bool _hasBullet = true;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
@@ -55,11 +68,12 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && _hasBullet)
         {
             //                   Pivot Direction, Bullet Spawn Position
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
             OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position);
+            _hasBullet = false;
         }
     }
 }
