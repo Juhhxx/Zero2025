@@ -345,11 +345,11 @@ Transform:
   m_GameObject: {fileID: 269650751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -1.53, y: -0.05, z: 0}
+  m_LocalPosition: {x: -2.21253, y: 0.3484, z: 0}
   m_LocalScale: {x: 9.533294, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 636275038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &522417298
 PrefabInstance:
@@ -433,7 +433,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4475669160926281235, guid: 7e632a315ca0925408ce7479da43f9bd, type: 3}
   m_PrefabInstance: {fileID: 522417298}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &736522048
+--- !u!1 &636275037
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441,87 +441,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 736522051}
-  - component: {fileID: 736522050}
-  - component: {fileID: 736522049}
+  - component: {fileID: 636275038}
   m_Layer: 0
-  m_Name: Player Input Mnager
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &736522049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736522048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8720e79b524e93847b632d58c9bc9834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputManager
-  _player1: {fileID: 1597238098}
-  _player2: {fileID: 1943787040}
---- !u!114 &736522050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736522048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInputManager
-  m_NotificationBehavior: 2
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 2
-  m_PlayerJoinedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_PlayerLeftEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_JoinAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: 
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: b23f7510-9083-4596-9004-57a11e196c87
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 0}
-  m_SplitScreen: 0
-  m_MaintainAspectRatioInSplitScreen: 0
-  m_FixedNumberOfSplitScreens: -1
-  m_SplitScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!4 &736522051
+--- !u!4 &636275038
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736522048}
+  m_GameObject: {fileID: 636275037}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.68253, y: -0.3984, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 774536044}
+  - {fileID: 269650754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774536041
@@ -655,11 +597,11 @@ Transform:
   m_GameObject: {fileID: 774536041}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 3.67, y: -0.12, z: 0}
+  m_LocalPosition: {x: 2.9874701, y: 0.2784, z: 0}
   m_LocalScale: {x: 9.533294, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 636275038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &921180574
 GameObject:
@@ -993,17 +935,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2227256663284302097, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
   m_PrefabInstance: {fileID: 1597238096}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1597238098 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4309383944530698044, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
-  m_PrefabInstance: {fileID: 1597238096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
 --- !u!114 &1614030993 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 909560902305123747, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
@@ -1085,17 +1016,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2227256663284302097, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
   m_PrefabInstance: {fileID: 1943787038}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1943787040 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4309383944530698044, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
-  m_PrefabInstance: {fileID: 1943787038}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
 --- !u!1 &1948514529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,13 +1674,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1159918010}
-  - {fileID: 736522051}
   - {fileID: 3911874476254798988}
   - {fileID: 921180577}
   - {fileID: 1948514530}
   - {fileID: 165348570}
   - {fileID: 1148732361}
-  - {fileID: 774536044}
-  - {fileID: 269650754}
   - {fileID: 1597238096}
   - {fileID: 1943787038}
+  - {fileID: 636275038}

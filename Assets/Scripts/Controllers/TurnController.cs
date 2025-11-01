@@ -23,6 +23,8 @@ public class TurnController : Controller<TurnController>
 
     // Misc variables
     private bool _isDodgingPhaseActive;
+    private int playersReadyAmount;
+    
 
     protected override void Awake()
     {
@@ -55,6 +57,15 @@ public class TurnController : Controller<TurnController>
         // Subscribe to onHitEvent on player hit boxes, which ends the round in the opponents favour
         playerHits[0].OnHitEvent += () => EndTurn(1);
         playerHits[1].OnHitEvent += () => EndTurn(0);
+
+        // Subscribe to OnShootingInputEvent for every player
+        foreach (PlayerController player in players)
+        {
+            player.OnShootingInputEvent += (shotDirection, spawnPosition) => CheckPlayersReady();
+        }
+
+        // Initialize playersReadyAmount
+        playersReadyAmount = 0;
     }
 
     void Start()
@@ -98,8 +109,23 @@ public class TurnController : Controller<TurnController>
         // enable current bullet preview
     }
 
+    private void CheckPlayersReady()
+    {
+        if (playersReadyAmount >= players.Count)
+        {
+            StartDodgingPhase();
+        }
+        else
+        {
+            playersReadyAmount++;
+        }
+    }
+
     public void StartDodgingPhase()
     {
+        // reset playersReadyAmount
+        playersReadyAmount = 0;
+
         // set _isDodgingPhaseActive to true, which starts the phase timer
         _isDodgingPhaseActive = true;
 
