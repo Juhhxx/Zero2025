@@ -97,7 +97,7 @@ public class TurnController : Controller<TurnController>
         dodgingPhaseTimer.ResetTimer();
 
         // Update timer UI
-        timerText.text = "" + dodgingPhaseTimer;
+        timerText.text = "" + dodgingPhaseDuration;
         timerFillArea.fillAmount = 1f;
 
         // disable player movement
