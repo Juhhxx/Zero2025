@@ -3,6 +3,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -17,6 +18,7 @@ public class TurnController : Controller<TurnController>
     public Image timerFillArea;
     public Timer dodgingPhaseTimer;
     public TextMeshProUGUI currentRoundText;
+    public TextMeshProUGUI countdownText;
 
     [Header("Bullet Variables")]
     public ShotsStack shotsStack;
@@ -123,9 +125,28 @@ public class TurnController : Controller<TurnController>
     private void CheckPlayersReady()
     {
         if (++playersReadyAmount >= players.Count)
-        {
-            StartDodgingPhase();
+        {   
+            StartCoroutine(CountdownToDodgingPhase());
         }
+    }
+
+    private IEnumerator CountdownToDodgingPhase()
+    {
+        countdownText.gameObject.SetActive(true);
+        int countdown = 3;
+
+        // Optional: you can use the timerText to display the countdown
+        while (countdown > 0)
+        {
+            countdownText.text = countdown.ToString();
+            yield return new WaitForSeconds(1f);
+            countdown--;
+        }
+
+        countdownText.gameObject.SetActive(false);
+
+        // Once countdown finishes, start the dodging phase
+        StartDodgingPhase();
     }
 
     public void StartDodgingPhase()

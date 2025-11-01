@@ -444,6 +444,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4475669160926281235, guid: 7e632a315ca0925408ce7479da43f9bd, type: 3}
   m_PrefabInstance: {fileID: 522417298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &625073400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458691433624458254, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &636275037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1396,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2845651167071401496, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3659548926412031282, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1812,6 +1827,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1614030993}
+    - target: {fileID: 7552570469221797365, guid: 63ab5ca50583b224dafd7847d462bcf8, type: 3}
+      propertyPath: countdownText
+      value: 
+      objectReference: {fileID: 625073400}
     - target: {fileID: 7552570469221797365, guid: 63ab5ca50583b224dafd7847d462bcf8, type: 3}
       propertyPath: timerFillArea
       value: 
