@@ -24,9 +24,13 @@ public class ShotsStack : MonoBehaviour
 
     private BulletPool _bulletPool;
 
+    private List<BulletController> _bulletsFired;
+
     private void Start()
     {
         _bulletPool = FindAnyObjectByType<BulletPool>();
+
+        _bulletsFired = new List<BulletController>();
 
         foreach (PlayerController p in _players) p.OnShootingInputEvent += AddShot;
     }
@@ -36,13 +40,24 @@ public class ShotsStack : MonoBehaviour
     {
         if (_shotStack.Count == 0) return;
 
-        foreach (ShotInfo si in _shotStack) _bulletPool.SpawnBullet(si.Direcion, si.Position);
+        foreach (ShotInfo si in _shotStack)
+        {
+            GameObject newBullet = _bulletPool.SpawnBullet(si.Direcion, si.Position);
+
+            _bulletsFired.Add(newBullet.GetComponent<BulletController>());
+        }
     }
 
     public void AddShot(Vector2 direction, Vector2 position)
     {
         ShotInfo si = new ShotInfo(position, direction);
         _shotStack.Add(si);
+    }
+
+    public void ClearBullets()
+    {
+        foreach (BulletController b in _bulletsFired) b.KillBullet();
+        _bulletsFired.Clear();
     }
 
     public void ResetStack() => _shotStack.Clear();

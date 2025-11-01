@@ -47,6 +47,8 @@ public class BulletPool : MonoBehaviour
 
     public void DespawnBullet(GameObject bullet)
     {
+        if (_pool.Contains(bullet)) return;
+        
         _pool.Push(bullet);
         bullet.SetActive(false);
     }
