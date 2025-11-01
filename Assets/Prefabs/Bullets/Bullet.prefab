@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184dd87c9cf30b5408b5092d17235da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
-  _ghostBullet: {fileID: 0}
-  _materializedBullet: {fileID: 0}
+  _ghostBullet: {fileID: 3655940021352812386}
+  _materializedBullet: {fileID: 3381977370414150487}
   _passesNeeded: 1
   _isMaterialized: 0
   OnBulletKill:
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef909073e4a1c5648ae2521f7adba864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
-  _speed: 5
+  _speed: 100
   _maxBounces: 0
 --- !u!1 &2223713173464658066
 GameObject:
@@ -14911,7 +14911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3381977370414150487}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14921,7 +14921,7 @@ Transform:
   - {fileID: 1982212836789860938}
   - {fileID: 7147891060668117978}
   m_Father: {fileID: 560704268849115286}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &3620786855492459157
 GameObject:
   m_ObjectHideFlags: 0
@@ -15106,7 +15106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3655940021352812386}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15117,7 +15117,7 @@ Transform:
   - {fileID: 1311675121415750687}
   - {fileID: 2309118245000633704}
   m_Father: {fileID: 560704268849115286}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &3660293278271893188
 GameObject:
   m_ObjectHideFlags: 0
