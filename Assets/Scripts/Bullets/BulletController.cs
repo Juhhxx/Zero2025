@@ -55,7 +55,7 @@ public class BulletController : MonoBehaviour
     {
         //Activate diving particle system
     }
-    
+
     public void KillBullet()
     {
         Debug.Log($"Bullet {name} Destroyed");
@@ -64,5 +64,11 @@ public class BulletController : MonoBehaviour
         _pool?.DespawnBullet(gameObject);
 
         if (_pool == null) Destroy(gameObject);
+    }
+    
+    public void dematerializeBullet()
+    {
+        _isMaterialized = false;
+        _passes = 0;
     }
 }

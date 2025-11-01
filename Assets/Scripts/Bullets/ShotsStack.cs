@@ -59,7 +59,11 @@ public class ShotsStack : MonoBehaviour
 
     public void ClearBullets()
     {
-        foreach (BulletController b in _bulletsFired) b.KillBullet();
+        foreach (BulletController b in _bulletsFired)
+        {
+            b.dematerializeBullet();
+            b.KillBullet();
+        }
         _bulletsFired.Clear();
     }
 
