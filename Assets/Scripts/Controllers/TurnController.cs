@@ -3,7 +3,6 @@ using System.Linq;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
-using Unity.VisualScripting;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -18,6 +17,10 @@ public class TurnController : Controller<TurnController>
     public Image timerFillArea;
     public Timer dodgingPhaseTimer;
 
+    [Header("Bullet Variables")]
+    public ShotsStack shotsStack;
+
+
     // Misc variables
     private bool _isDodgingPhaseActive;
 
@@ -25,7 +28,11 @@ public class TurnController : Controller<TurnController>
     {
         base.Awake();
 
+        // Find all players in the scene
         players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None).ToList();
+
+        // Find the shots stack
+        shotsStack = FindFirstObjectByType<ShotsStack>();
 
         // Register the players' start position
         foreach (PlayerController player in players)
@@ -48,7 +55,6 @@ public class TurnController : Controller<TurnController>
         // Subscribe to onHitEvent on player hit boxes, which ends the round in the opponents favour
         playerHits[0].OnHitEvent += () => EndTurn(1);
         playerHits[1].OnHitEvent += () => EndTurn(0);
-
     }
 
     void Start()
@@ -79,10 +85,13 @@ public class TurnController : Controller<TurnController>
         dodgingPhaseTimer.ResetTimer();
 
         // disable player movement
-        foreach(PlayerController player in players)
+        foreach (PlayerController player in players)
         {
             player.AllowMovement = false;
         }
+
+        // clear bullets from screen
+        shotsStack.ClearBullets();
 
         // summon previous player ghosts
 
@@ -101,7 +110,7 @@ public class TurnController : Controller<TurnController>
         }
 
         // shoot all bullets
-
+        shotsStack.Shoot();
 
     }
 
@@ -114,6 +123,7 @@ public class TurnController : Controller<TurnController>
         }
 
         // delete all previews
+        shotsStack.ResetStack();
 
         // register player score
         ScoreController.Instance.ScorePointForPlayer(winningPlayer);
