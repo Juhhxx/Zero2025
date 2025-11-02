@@ -102,7 +102,11 @@ public class ShotsStack : MonoBehaviour
         _bulletsFired.Clear();
     }
 
-    public void ResetStack() => _shotStack.Clear();
+    public void ResetStack()
+    {
+        ClearBullets();
+        _shotStack.Clear();
+    }
     
     private void OnDrawGizmos()
     {

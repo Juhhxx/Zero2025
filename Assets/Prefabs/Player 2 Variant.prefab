@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 5555341075917137142, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
       propertyPath: _bulletPreviewPrefab
       value: 
-      objectReference: {fileID: 1238147336273523164, guid: 6dc1a46cfc788ef42a7b0374c52c56f0, type: 3}
+      objectReference: {fileID: 501877236639387055, guid: de7646992541d58459d0f3b9f9c2b42a, type: 3}
     - target: {fileID: 6023166443937247509, guid: 38c17391bfc66f94aa15a0ce8c688064, type: 3}
       propertyPath: m_Controller
       value: 

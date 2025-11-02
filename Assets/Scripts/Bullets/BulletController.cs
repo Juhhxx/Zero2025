@@ -70,6 +70,7 @@ public class BulletController : MonoBehaviour
     {
         _isMaterialized = false;
         _passes = 0;
+        _collider.isTrigger = true;
     }
     
     public bool getIsMaterialized()

@@ -139,14 +139,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void KeyboardAim()
-    {   
-        if(_hasBullet)
+    {
+        if (_hasBullet)
         {
             if (_keyboardAimRight)
-            _aimPivot.Rotate(new Vector3(0, 0, -90*Time.deltaTime));
+                _aimPivot.Rotate(new Vector3(0, 0, -90 * Time.deltaTime));
             if (_keyboardAimLeft)
-            _aimPivot.Rotate(new Vector3(0, 0, 90*Time.deltaTime));   
+                _aimPivot.Rotate(new Vector3(0, 0, 90 * Time.deltaTime));
         }
+        else _aimPivot.Rotate(Vector2.zero); //prevents residual input from carrying over to the next aim phase
 
     }
 
@@ -178,5 +179,13 @@ public class PlayerController : MonoBehaviour
     public void setAimPreviewState(bool newState)
     {
         _aimPivot.gameObject.SetActive(newState);
+    }
+
+    // Resets aiming input (called when entering an aim phase)
+    public void ClearKeyboardInput()
+    {
+        _keyboardAimRight = false;
+        _keyboardAimLeft = false;
+
     }
 }

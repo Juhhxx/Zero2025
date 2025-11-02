@@ -102,8 +102,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.20188677, g: 1, b: 0.2277075, a: 0}
-      key1: {r: 0, g: 1, b: 0.55724907, a: 1}
+      key0: {r: 0.09186897, g: 0.68117136, b: 0.9547169, a: 0}
+      key1: {r: 0.35283017, g: 0.9752413, b: 1, a: 1}
       key2: {r: 0.014845048, g: 0.5245282, b: 0.42294845, a: 1}
       key3: {r: 0, g: 0.22521417, b: 0.23018861, a: 0}
       key4: {r: 0.5320754, g: 0, b: 0.51289064, a: 0}
@@ -281,7 +281,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

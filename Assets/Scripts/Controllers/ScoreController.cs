@@ -73,6 +73,6 @@ public class ScoreController : Controller<ScoreController>
     {
         victoryMessage.text = winningPlayer;
         endScreen.SetActive(true);
-        PauseController.Instance.pauseGame();
+        //PauseController.Instance.pauseGame();
     }
 }
