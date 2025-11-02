@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 96a9adeb4aac0144c8afadf8b0ac0583
+guid: 96ad44aae57b8824ab8fe58de8bd657a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3864246851907758001
-    second: 2ab2042f3075563cfd5716674d70a32d_0
+      213: 3058245163614814405
+    second: UI-CardTexture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2ab2042f3075563cfd5716674d70a32d_0
+      name: UI-CardTexture_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1000
-        height: 1402
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b72264c90090a530800000000000000
-      internalID: 3864246851907758001
+      spriteID: 5c04155e5c1117a20800000000000000
+      internalID: 3058245163614814405
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      2ab2042f3075563cfd5716674d70a32d_0: 3864246851907758001
+      UI-CardTexture_0: 3058245163614814405
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
