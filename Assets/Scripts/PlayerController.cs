@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
+    [SerializeField] private GameObject _bulletPreviewPrefab;
     private bool _allowMovement = true;
     public bool AllowMovement
     {
@@ -29,6 +30,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
 
+    [SerializeField] private bool _showPreview;
+    public void SetShowpreviw(bool set)
+    {
+        _showPreview = set;
+        Destroy(_bulletPreview);
+    } 
+    private GameObject _bulletPreview = null;
+    private Quaternion _aimRotation;
+    private Timer _calculatePreview;
+
     public event Action<Vector2, Vector2, Vector2> OnShootingInputEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,7 +47,8 @@ public class PlayerController : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         Debug.Log(_rb.name);
-
+        _calculatePreview = new Timer(0.1f);
+        _calculatePreview.OnTimerDone += CalculatePreview;
     }
 
     // Update is called once per frame
@@ -46,6 +58,28 @@ public class PlayerController : MonoBehaviour
         else _rb.linearVelocity = Vector2.zero; //prevents residual speed from carrying over to aiming phase
         PointInAimDirection();
         KeyboardAim();
+        _calculatePreview.CountTimer();
+    }
+
+    private void CalculatePreview()
+    {
+        var temp = _aimPivot.rotation;
+
+        if (temp != _aimRotation && _showPreview)
+        {
+            Debug.LogWarning("DOING PREVIEW");
+            if (_bulletPreview != null)
+            {
+                Destroy(_bulletPreview);
+                _bulletPreview = null;
+            }
+
+            _bulletPreview = Instantiate(_bulletPreviewPrefab, _bulletSpawnPoint.position, Quaternion.identity);
+
+            _bulletPreview.GetComponent<BulletPreview>().Move(_aimPivot.rotation * Vector2.up);
+        }
+
+        _aimRotation = _aimPivot.rotation;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -56,7 +90,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Aim(InputAction.CallbackContext context)
-    {
+    {        
         _aimDirection = context.ReadValue<Vector2>();
     }
 
