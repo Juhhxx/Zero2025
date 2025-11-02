@@ -119,21 +119,29 @@ public class PlayerController : MonoBehaviour
     }
 
     private void KeyboardAim()
-    {
-        if (_keyboardAimRight)
+    {   
+        if(_hasBullet)
+        {
+            if (_keyboardAimRight)
             _aimPivot.Rotate(new Vector3(0, 0, -90*Time.deltaTime));
-        if (_keyboardAimLeft)
-            _aimPivot.Rotate(new Vector3(0, 0, 90*Time.deltaTime));
+            if (_keyboardAimLeft)
+            _aimPivot.Rotate(new Vector3(0, 0, 90*Time.deltaTime));   
+        }
+
     }
 
     private void PointInAimDirection()
-    {
-        if(_aimDirection != Vector2.zero)
+    {   
+        if(_hasBullet)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _aimDirection);
-            Quaternion rotation = Quaternion.RotateTowards(_aimPivot.rotation, targetRotation, 100f * Time.deltaTime);
-            _aimPivot.rotation = rotation;
+            if(_aimDirection != Vector2.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _aimDirection);
+                Quaternion rotation = Quaternion.RotateTowards(_aimPivot.rotation, targetRotation, 100f * Time.deltaTime);
+                _aimPivot.rotation = rotation;
+            }            
         }
+
     }
 
     public void Shoot(InputAction.CallbackContext context)
