@@ -71,5 +71,16 @@ public class ShotsStack : MonoBehaviour
     
     private void OnDrawGizmos()
     {
+        if (_showShots)
+        {
+            Gizmos.color = Color.red;
+
+            foreach (ShotInfo si in _shotStack)
+            {
+                Gizmos.DrawLine(si.Position + (Vector2.up * 5), si.Position + (Vector2.down * 5));
+                Gizmos.DrawLine(si.Position + (Vector2.left * 5), si.Position + (Vector2.right * 5));
+                Gizmos.DrawLine(si.Position, (si.Position + si.Direcion * 10));
+            }
+        }
     }
 }

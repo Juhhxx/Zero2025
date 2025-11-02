@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class BulletController : MonoBehaviour
 {
+    [SerializeField] private Collider2D _collider;
     [SerializeField] private GameObject _ghostBullet;
     [SerializeField] private GameObject _materializedBullet;
     [SerializeField] private int _passesNeeded;
@@ -11,17 +12,10 @@ public class BulletController : MonoBehaviour
 
     [SerializeField, ReadOnly] private bool _isMaterialized = false;
 
-    private Collider2D _collider;
-
     public UnityEvent OnBulletKill;
 
     private BulletPool _pool;
     public void SetPool(BulletPool pool) => _pool = pool;
-
-    private void Start()
-    {
-        _collider = GetComponent<Collider2D>();
-    }
 
     private void Update()
     {
