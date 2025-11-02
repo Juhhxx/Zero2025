@@ -1957,6 +1957,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1592762345}
     m_Modifications:
+    - target: {fileID: 1209050516285871729, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963366675}
+    - target: {fileID: 1209050516285871729, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSoundFXVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 1327906524051757530, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2081,6 +2089,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5734085753863172613, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963366675}
+    - target: {fileID: 5734085753863172613, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 5867110007380711066, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -2105,6 +2121,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 963366675}
+    - target: {fileID: 8235306847227753491, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 963366675}
+    - target: {fileID: 8235306847227753491, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 8305508533815647279, guid: 304a8212fa854c041b4c36eee872384e, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
