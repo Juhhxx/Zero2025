@@ -8,7 +8,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
-    public bool AllowMovement { get; set; } = true;
+    private bool _allowMovement = true;
+    public bool AllowMovement
+    {
+        get => _allowMovement;
+        set
+        {   
+            //this resets the bullet when we go back to planning phase
+            //Probably not the best way to do this
+            if (!value)
+                _hasBullet = true;
+            _allowMovement = value;
+        } 
+    }
+    private bool _hasBullet = true;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
@@ -26,13 +39,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.linearVelocity = _moveInput * _moveSpeed;
+        if (_allowMovement) _rb.linearVelocity = _moveInput * _moveSpeed;
+        else _rb.linearVelocity = Vector2.zero; //prevents residual speed from carrying over to aiming phase
         PointInAimDirection();
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        if(AllowMovement)
+        if(_allowMovement)
         {
             _moveInput = context.ReadValue<Vector2>();
         }
@@ -55,11 +69,12 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && _hasBullet)
         {
             //                   Pivot Direction, Bullet Spawn Position
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
             OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position);
+            _hasBullet = false;
         }
     }
 }
