@@ -39,13 +39,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rb.linearVelocity = _moveInput * _moveSpeed;
+        if (_allowMovement) _rb.linearVelocity = _moveInput * _moveSpeed;
+        else _rb.linearVelocity = Vector2.zero; //prevents residual speed from carrying over to aiming phase
         PointInAimDirection();
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        if(AllowMovement)
+        if(_allowMovement)
         {
             _moveInput = context.ReadValue<Vector2>();
         }
