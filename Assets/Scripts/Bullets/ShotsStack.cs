@@ -33,6 +33,7 @@ public class ShotsStack : MonoBehaviour
     void Awake()
     {
         _bulletsFired = new List<BulletController>();
+        _ghosts = new List<GameObject>();
     }
 
     private void Start()
