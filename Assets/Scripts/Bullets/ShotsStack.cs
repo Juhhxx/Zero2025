@@ -51,7 +51,7 @@ public class ShotsStack : MonoBehaviour
         foreach (ShotInfo si in _shotStack)
         {
             GameObject newBullet = _bulletPool.SpawnBullet(si.Direcion, si.Position);
-
+            newBullet.GetComponent<BulletController>().activated = true;
             _bulletsFired.Add(newBullet.GetComponent<BulletController>());
         }
     }
@@ -97,6 +97,7 @@ public class ShotsStack : MonoBehaviour
         foreach (BulletController b in _bulletsFired)
         {
             b.dematerializeBullet();
+            b.activated = false;
             b.KillBullet();
         }
         _bulletsFired.Clear();
