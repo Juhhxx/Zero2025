@@ -368,8 +368,8 @@ MonoBehaviour:
   _aimPivot: {fileID: 6625482808740547268}
   _bulletSpawnPoint: {fileID: 2227256663284302097}
   _bulletPreviewPrefab: {fileID: 1238147336273523164, guid: 6dc1a46cfc788ef42a7b0374c52c56f0, type: 3}
-  _playerAnim: {fileID: 0}
-  _gunAnim: {fileID: 0}
+  _playerAnim: {fileID: 894418131520687399}
+  _gunAnim: {fileID: 6023166443937247509}
   _showPreview: 1
 --- !u!95 &894418131520687399
 Animator:
