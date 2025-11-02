@@ -29,12 +29,18 @@ public class BulletController : MonoBehaviour
             _ghostBullet.SetActive(false);
             _materializedBullet.SetActive(true);
             _collider.isTrigger = false;
+
+            LayerMask excluded = LayerMask.GetMask("Player", "Borders");
+            _collider.excludeLayers = excluded;
         }
         else
         {
             _ghostBullet.SetActive(true);
             _materializedBullet.SetActive(false);
             _collider.isTrigger = true;
+
+            LayerMask excluded = LayerMask.GetMask("Player", "Borders", "PlayerHurtBox");
+            _collider.excludeLayers = excluded;
         }
     }
 
@@ -59,10 +65,15 @@ public class BulletController : MonoBehaviour
 
         if (_pool == null) Destroy(gameObject);
     }
-    
+
     public void dematerializeBullet()
     {
         _isMaterialized = false;
         _passes = 0;
+    }
+    
+    public bool getIsMaterialized()
+    {
+        return _isMaterialized;
     }
 }

@@ -20,9 +20,13 @@ public class DetectBulletHit : MonoBehaviour
     {
         Debug.Log(other.name);
         if (other.GetComponent<BulletController>()!=null)
-        {
-            Debug.Log(transform.name + " was Hit");
-            OnHitEvent?.Invoke();
+        {   
+            // if the bullet is materialized, register a hit
+            if(other.GetComponent<BulletController>().getIsMaterialized())
+            {
+                Debug.Log(transform.name + " was Hit");
+                OnHitEvent?.Invoke();
+            }
         }
     }
 }
