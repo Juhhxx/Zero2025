@@ -37,12 +37,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bit_rate: 256
+    - _Bit_rate: 118
     - _Swirling_speed: 0.16
-    - _Vignette_Intesnity: 0.575
+    - _Vignette_Intesnity: 0.09
     m_Colors:
-    - _Color_Background: {r: 8.892105, g: 0, b: 32, a: 1}
-    - _Color_Balls: {r: 10.44713, g: 0, b: 5.714427, a: 1}
+    - _Color_Background: {r: 0, g: 5.0984874, b: 3.278287, a: 1}
+    - _Color_Balls: {r: 0, g: 6.2490563, b: 2.271865, a: 1}
     - _Scroll_Speed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
