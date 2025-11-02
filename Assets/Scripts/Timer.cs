@@ -22,9 +22,11 @@ public class Timer
         else if (_time <= 0)
         {
             if (_timerReset == TimerReset.Automatic) ResetTimer();
-            if (!_done) OnTimerDone?.Invoke();
-
-            _done = true;
+            if (!_done)
+            {   
+                _done = true;
+                OnTimerDone?.Invoke();
+            }          
         }
     }
     public void ResetTimer()
