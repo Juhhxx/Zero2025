@@ -41,4 +41,9 @@ public class Timer
         _time = time;
         _timerReset = timerReset;
     }
+
+    public void setNewMax(float newMax)
+    {
+        _maxTime = newMax;
+    }
 }

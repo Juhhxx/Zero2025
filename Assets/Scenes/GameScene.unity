@@ -1794,10 +1794,6 @@ PrefabInstance:
       propertyPath: currentRoundText
       value: 
       objectReference: {fileID: 329683402}
-    - target: {fileID: 7552570469221797365, guid: 63ab5ca50583b224dafd7847d462bcf8, type: 3}
-      propertyPath: dodgingPhaseDuration
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

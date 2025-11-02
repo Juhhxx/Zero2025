@@ -95,6 +95,10 @@ public class TurnController : Controller<TurnController>
         // set _isDodgingPhaseActive to false
         _isDodgingPhaseActive = false;
 
+        // increment dodgingPhaseDuration and update timer accordingly
+        dodgingPhaseDuration++;
+        dodgingPhaseTimer.setNewMax(dodgingPhaseDuration);
+
         // reset phase timer
         dodgingPhaseTimer.ResetTimer();
 
@@ -188,6 +192,9 @@ public class TurnController : Controller<TurnController>
         currentRoundText.text = "Current Round: " + _currentTurn.ToString();
 
         Debug.Log("Ended round. " + winningPlayer + " scored");
+
+        // reset dodgingPhaseDuration
+        dodgingPhaseDuration = 4;
 
         // start setup phase
         StartSetupPhase();
