@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform _aimPivot;
     [SerializeField] private Transform _bulletSpawnPoint;
     [SerializeField] private GameObject _bulletPreviewPrefab;
+    [SerializeField] private Animator _playerAnim;
+    [SerializeField] private Animator _gunAnim;
     private bool _allowMovement = true;
     public bool AllowMovement
     {
@@ -60,7 +62,11 @@ public class PlayerController : MonoBehaviour
         PointInAimDirection();
         KeyboardAim();
         _calculatePreview.CountTimer();
+
+        _playerAnim.SetFloat("Speed", _rb.linearVelocity.magnitude);
     }
+
+    public void ShotAnimation() => _gunAnim.SetTrigger("Shot");
 
     private void CalculatePreview()
     {
