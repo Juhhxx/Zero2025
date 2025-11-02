@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator _playerAnim;
     [SerializeField] private Animator _gunAnim;
     private bool _allowMovement = true;
+    private DetectBulletHit detectBulletHit;
     public bool AllowMovement
     {
         get => _allowMovement;
@@ -52,6 +53,9 @@ public class PlayerController : MonoBehaviour
         Debug.Log(_rb.name);
         _calculatePreview = new Timer(0.1f);
         _calculatePreview.OnTimerDone += CalculatePreview;
+
+        detectBulletHit = GetComponentInChildren<DetectBulletHit>();
+        detectBulletHit.OnHitEvent +=  () =>_playerAnim.SetTrigger("Death");
     }
 
     // Update is called once per frame
