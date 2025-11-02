@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShotsStack
   _shotStack: []
-  _showShots: 0
+  _showShots: 1
   _players:
   - {fileID: 1822126194}
   - {fileID: 1161374117}
@@ -686,6 +686,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62d74dfb7b7f0fb4bb99383e260b69bc, type: 3}
+--- !u!1 &354874004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354874006}
+  - component: {fileID: 354874005}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &354874005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354874004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 8c99022e89876df45a577bfa3cbb7042, type: 2}
+--- !u!4 &354874006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354874004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -173.68124, y: 23.57564, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367595667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,6 +1868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4513897408763463824, guid: 3691bba22d05e184ea47da5a6704bee5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5400149402097384597, guid: 3691bba22d05e184ea47da5a6704bee5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1004.12305
@@ -2014,7 +2067,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2046,6 +2099,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27e9b7c5aba231458259d866f62dade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &1266624240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8678909991470422345, guid: 3691bba22d05e184ea47da5a6704bee5, type: 3}
+  m_PrefabInstance: {fileID: 1148732361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67ddc11540da9244b2cbcc8b50f9c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276010637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +3867,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3535637267152492171, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1266624240}
+    - target: {fileID: 3535637267152492171, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 3659548926412031282, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3814,6 +3886,18 @@ PrefabInstance:
     - target: {fileID: 4330838951160315990, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_Name
       value: Canvas UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330838951160315990, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5064940842704678771, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1266624240}
+    - target: {fileID: 5064940842704678771, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
       objectReference: {fileID: 0}
     - target: {fileID: 5447631295257278889, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3858,6 +3942,14 @@ PrefabInstance:
     - target: {fileID: 5447631295257278889, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782525919818683262, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1266624240}
+    - target: {fileID: 5782525919818683262, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSoundFXVolume
       objectReference: {fileID: 0}
     - target: {fileID: 6344591214648065720, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_IsActive
@@ -4267,3 +4359,4 @@ SceneRoots:
   - {fileID: 1943787038}
   - {fileID: 636275038}
   - {fileID: 1970058125}
+  - {fileID: 354874006}

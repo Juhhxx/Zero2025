@@ -63,6 +63,17 @@ public class ShotsStack : MonoBehaviour
         {
             GameObject newGhost = Instantiate(_ghostPrefab, si.PlayerPosition, Quaternion.identity);
 
+            float newRot = (Mathf.Atan2(si.Direcion.y, si.Direcion.x) * Mathf.Rad2Deg) - 90f;
+
+            newGhost.transform.GetChild(0).rotation = Quaternion.Euler(0f, 0f, newRot);
+
+            Debug.LogWarning($"NEW GHOST WITH ROT {newRot}");
+
+            if (!(newGhost.transform.GetChild(0).GetChild(0).position.x >= newGhost.transform.position.x))
+            {
+                newGhost.transform.GetChild(0).GetComponentInChildren<SpriteRenderer>().flipY = true;
+            }
+
             _ghosts.Add(newGhost);
         }
     }
