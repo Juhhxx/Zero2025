@@ -2952,6 +2952,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: loadMainMenuScene
       objectReference: {fileID: 0}
+    - target: {fileID: 3833663801981052862, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+      propertyPath: m_text
+      value: Rematch
+      objectReference: {fileID: 0}
     - target: {fileID: 4330838951160315990, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
       propertyPath: m_Name
       value: Canvas UI
