@@ -34,7 +34,8 @@ public class PlayerController : MonoBehaviour
     public void SetShowpreviw(bool set)
     {
         _showPreview = set;
-        Destroy(_bulletPreview);
+        
+        if (!set) Destroy(_bulletPreview);
     } 
     private GameObject _bulletPreview = null;
     private Quaternion _aimRotation;
