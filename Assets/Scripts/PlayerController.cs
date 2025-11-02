@@ -64,6 +64,8 @@ public class PlayerController : MonoBehaviour
         _calculatePreview.CountTimer();
 
         _playerAnim.SetFloat("Speed", _rb.linearVelocity.magnitude);
+
+        MirrorHand();
     }
 
     public void ShotAnimation() => _gunAnim.SetTrigger("Shot");
@@ -87,6 +89,18 @@ public class PlayerController : MonoBehaviour
         }
 
         _aimRotation = _aimPivot.rotation;
+    }
+
+     private void MirrorHand()
+    {
+        if (_bulletSpawnPoint.position.x >= transform.position.x)
+        {
+            _bulletSpawnPoint.GetComponent<SpriteRenderer>().flipY = false;
+        }
+        else
+        {
+            _bulletSpawnPoint.GetComponent<SpriteRenderer>().flipY = true;
+        }
     }
 
     public void Move(InputAction.CallbackContext context)
