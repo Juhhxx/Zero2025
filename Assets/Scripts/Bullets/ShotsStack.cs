@@ -55,6 +55,7 @@ public class ShotsStack : MonoBehaviour
         }
     }
 
+    [Button(enabledMode: EButtonEnableMode.Playmode)]
     public void ShowGhosts()
     {
         foreach (ShotInfo si in _shotStack)
@@ -63,6 +64,14 @@ public class ShotsStack : MonoBehaviour
 
             _ghosts.Add(newGhost);
         }
+    }
+
+    [Button(enabledMode: EButtonEnableMode.Playmode)]
+    public void DeleteGhosts()
+    {
+        foreach (GameObject go in _ghosts) Destroy(go);
+
+        _ghosts.Clear();
     }
 
     public void AddShot(Vector2 direction, Vector2 position, Vector2 playerPos)
