@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-7842872837974790168
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-003_{-7842872837974790168}
+  m_AudioClip: {fileID: 8300000, guid: bc39731629adc4a4199bb81f10f2fd39, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4739438379772468338
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-004_{-4739438379772468338}
+  m_AudioClip: {fileID: 8300000, guid: f13ccdd0abd1a414996f68f91659e633, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2474623556780049511
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-002_{-2474623556780049511}
+  m_AudioClip: {fileID: 8300000, guid: 9829b18194154b24fa52463b5b220b0c, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1275748848292430992
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-007_{-1275748848292430992}
+  m_AudioClip: {fileID: 8300000, guid: ba01501454ef9f143b8008f1c35ce115, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-42441086860175617
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-006_{-42441086860175617}
+  m_AudioClip: {fileID: 8300000, guid: 1a64e6ab1aa89ab408743c49f0b1b127, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet
+  m_Volume: -15
+  m_Pitch: 200
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -100, y: 100}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 8962962746558312315}
+  - {fileID: -2474623556780049511}
+  - {fileID: -7842872837974790168}
+  - {fileID: -4739438379772468338}
+  - {fileID: 8457687255347461613}
+  - {fileID: -42441086860175617}
+  - {fileID: -1275748848292430992}
+  m_AvoidRepeatingLast: 2
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8457687255347461613
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-005_{8457687255347461613}
+  m_AudioClip: {fileID: 8300000, guid: 76f9a6294a7cbb34eac43fe6f8e4af41, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8962962746558312315
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ricochet-001_{8962962746558312315}
+  m_AudioClip: {fileID: 8300000, guid: f85af247b32ef744888f4cc06e88ab37, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

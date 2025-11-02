@@ -29,6 +29,11 @@ public class TurnController : Controller<TurnController>
     private bool _isDodgingPhaseActive;
     private int playersReadyAmount;
     private int _currentTurn;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip _gunshotClip;
+    [SerializeField] private AudioClip _tickingClip;
+    private bool hasPlayedTicking = false;
     
 
     protected override void Awake()
@@ -85,9 +90,9 @@ public class TurnController : Controller<TurnController>
     }
 
     void Update()
-    {   
+    {
         // If in the dodging phase
-        if(_isDodgingPhaseActive)
+        if (_isDodgingPhaseActive)
         {
             // Count down timer
             dodgingPhaseTimer.CountTimer();
@@ -95,6 +100,15 @@ public class TurnController : Controller<TurnController>
             // Update timer UI
             timerText.text = "" + (int)dodgingPhaseTimer.CurrentTime;
             timerFillArea.fillAmount = dodgingPhaseTimer.CurrentTime / dodgingPhaseDuration;
+
+            if (dodgingPhaseTimer.CurrentTime < 5f && !hasPlayedTicking)
+            {
+                hasPlayedTicking = true;
+                SoundFXManager.instance.PlaySoundFXClip(_tickingClip, transform, 3f);
+            }
+        } else
+        {
+            hasPlayedTicking = false;
         }
     }
 
@@ -195,6 +209,7 @@ public class TurnController : Controller<TurnController>
 
         // shoot all bullets
         shotsStack.Shoot();
+        SoundFXManager.instance.PlaySoundFXClip(_gunshotClip, transform, 1f);
 
         Debug.Log("Started Dodging phase");
     }

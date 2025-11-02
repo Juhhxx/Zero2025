@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
   _speed: 200
   _maxBounces: 0
+  _ricochetClips: {fileID: 6418180475301049370, guid: 67fec57ab473ad34eaeb4135afb95b35, type: 2}
 --- !u!1 &2223713173464658066
 GameObject:
   m_ObjectHideFlags: 0

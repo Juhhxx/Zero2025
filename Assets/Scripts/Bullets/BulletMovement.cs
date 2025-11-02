@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 public class BulletMovement : MonoBehaviour
@@ -10,6 +11,9 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D _rb;
 
     private BulletController _controller;
+
+    [Header("Audio")]
+    [SerializeField] private AudioResource _ricochetClips;
 
     private void Awake()
     {
@@ -34,15 +38,16 @@ public class BulletMovement : MonoBehaviour
 
         _rb.rotation = angle;
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (_bounces == _maxBounces && _maxBounces > 0)
         {
             _controller.KillBullet();
             return;
-        } 
-        
+        }
+        PlayRicochetSFX();
+
         Debug.LogWarning($"COLLIDNG WITH {collision.collider.name}");
 
         Vector2 newDir = Vector2.Reflect(transform.right, collision.contacts[0].normal);
@@ -53,4 +58,11 @@ public class BulletMovement : MonoBehaviour
 
         _bounces++;
     }
+
+    #region Audio
+    private void PlayRicochetSFX()
+    {
+        SoundFXManager.instance.PlaySoundFXResource(_ricochetClips, transform, 1f, 1.590f);
+    }
+    #endregion
 }

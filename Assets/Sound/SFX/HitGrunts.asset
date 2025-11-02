@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-6004551477591435092
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-004_{-6004551477591435092}
+  m_AudioClip: {fileID: 8300000, guid: c03e8f5a08493c844866a8c805aeaa82, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5752804091895559016
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-001_{-5752804091895559016}
+  m_AudioClip: {fileID: 8300000, guid: 841fee31d3eac58429b3e6899c2f5c3f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5297985309853661341
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-005_{-5297985309853661341}
+  m_AudioClip: {fileID: 8300000, guid: 95de34ed42a58c04fb10ea849f77c894, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &849404986087441713
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-007_{849404986087441713}
+  m_AudioClip: {fileID: 8300000, guid: ebb0592191887c94aaeadc44f4d94160, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4446079318443762476
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-002_{4446079318443762476}
+  m_AudioClip: {fileID: 8300000, guid: 4fea70db472629f41a21452f7d9a3934, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunts
+  m_Volume: 0
+  m_Pitch: 300
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 400}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -5752804091895559016}
+  - {fileID: 4446079318443762476}
+  - {fileID: 7716152966902431720}
+  - {fileID: -6004551477591435092}
+  - {fileID: -5297985309853661341}
+  - {fileID: 8412284493109781345}
+  - {fileID: 849404986087441713}
+  m_AvoidRepeatingLast: 2
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7716152966902431720
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-003_{7716152966902431720}
+  m_AudioClip: {fileID: 8300000, guid: db2f409588b2ab041a6f5292e030bd29, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8412284493109781345
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HitGrunt-006_{8412284493109781345}
+  m_AudioClip: {fileID: 8300000, guid: 4f06821f99ffe0a40bce658170dcebe3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
