@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -34,6 +35,9 @@ public class TurnController : Controller<TurnController>
     [SerializeField] private AudioClip _gunshotClip;
     [SerializeField] private AudioClip _tickingClip;
     private bool hasPlayedTicking = false;
+
+    public UnityEvent OnBeginPlanningPhase;
+    public UnityEvent OnBeginDodgingPhase;
     
 
     protected override void Awake()
@@ -154,6 +158,8 @@ public class TurnController : Controller<TurnController>
         _currentTurn++;
         currentRoundText.text = "Current Round: " + _currentTurn.ToString();
 
+        OnBeginPlanningPhase.Invoke();
+
         Debug.Log("Started Setup phase");
     }
 
@@ -178,7 +184,7 @@ public class TurnController : Controller<TurnController>
             countdown--;
         }
 
-        countdownText.gameObject.SetActive(false);
+        countdownText.gameObject.SetActive(false);  
 
         // Once countdown finishes, start the dodging phase
         StartDodgingPhase();
@@ -210,6 +216,8 @@ public class TurnController : Controller<TurnController>
         // shoot all bullets
         shotsStack.Shoot();
         SoundFXManager.instance.PlaySoundFXClip(_gunshotClip, transform, 1f);
+
+        OnBeginDodgingPhase.Invoke();
 
         Debug.Log("Started Dodging phase");
     }
