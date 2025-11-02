@@ -120,9 +120,9 @@ public class PlayerController : MonoBehaviour
     private void KeyboardAim()
     {
         if (_keyboardAimRight)
-            _aimPivot.Rotate(new Vector3(0, 0, -3));
+            _aimPivot.Rotate(new Vector3(0, 0, -90*Time.deltaTime));
         if (_keyboardAimLeft)
-            _aimPivot.Rotate(new Vector3(0, 0, 3));
+            _aimPivot.Rotate(new Vector3(0, 0, 90*Time.deltaTime));
     }
 
     private void PointInAimDirection()
@@ -144,5 +144,10 @@ public class PlayerController : MonoBehaviour
             OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position, transform.position);
             _hasBullet = false;
         }
+    }
+
+    public void setAimPreviewState(bool newState)
+    {
+        _aimPivot.gameObject.SetActive(newState);
     }
 }

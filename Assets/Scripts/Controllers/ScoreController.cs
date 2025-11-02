@@ -47,7 +47,7 @@ public class ScoreController : Controller<ScoreController>
                 }
                 else
                 {
-                    winningPlayer = "Player 1";
+                    winningPlayer = "1";
                     EndGame();
                 }
                 break;
@@ -62,7 +62,7 @@ public class ScoreController : Controller<ScoreController>
                 }
                 else
                 {
-                    winningPlayer = "Player 2";
+                    winningPlayer = "2";
                     EndGame();
                 }
                 break;
@@ -71,7 +71,7 @@ public class ScoreController : Controller<ScoreController>
     
     public void EndGame()
     {
-        victoryMessage.text = winningPlayer + " wins!";
+        victoryMessage.text = winningPlayer;
         endScreen.SetActive(true);
         PauseController.Instance.pauseGame();
     }
