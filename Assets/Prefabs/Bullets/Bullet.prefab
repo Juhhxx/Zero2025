@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 184dd87c9cf30b5408b5092d17235da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletController
-  _collider: {fileID: 6891886002889673981}
+  _collider: {fileID: 5894426444813392979}
   _ghostBullet: {fileID: 3655940021352812386}
   _materializedBullet: {fileID: 3381977370414150487}
   _passesNeeded: 1

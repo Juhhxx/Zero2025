@@ -212,10 +212,15 @@ MonoBehaviour:
   _shotStack:
   - <Position>k__BackingField: {x: 150, y: 0}
     <Direcion>k__BackingField: {x: 1, y: 0}
+    <PlayerPosition>k__BackingField: {x: 0, y: 0}
+  - <Position>k__BackingField: {x: 150, y: 20}
+    <Direcion>k__BackingField: {x: 1, y: 0}
+    <PlayerPosition>k__BackingField: {x: 0, y: 0}
   _showShots: 1
   _players:
   - {fileID: 74158420}
   - {fileID: 1161374117}
+  _ghostPrefab: {fileID: 0}
 --- !u!1 &269650751
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
 
-    public event Action<Vector2, Vector2> OnShootingInputEvent;
+    public event Action<Vector2, Vector2, Vector2> OnShootingInputEvent;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         {
             //                   Pivot Direction, Bullet Spawn Position
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
-            OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position);
+            OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position, transform.position);
             _hasBullet = false;
         }
     }

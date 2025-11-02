@@ -10,21 +10,25 @@ public class ShotsStack : MonoBehaviour
     {
         [field: SerializeField] public Vector2 Position { get; private set; }
         [field: SerializeField] public Vector2 Direcion { get; private set; }
+        [field: SerializeField] public Vector2 PlayerPosition { get; private set; }
 
-        public ShotInfo(Vector2 position, Vector2 direction)
+        public ShotInfo(Vector2 position, Vector2 direction, Vector2 playerPos)
         {
             Position = position;
             Direcion = direction;
+            PlayerPosition = playerPos;
         }
     }
 
     [SerializeField] private List<ShotInfo> _shotStack;
     [SerializeField] private bool _showShots;
     [SerializeField] private List<PlayerController> _players;
+    [SerializeField] private GameObject _ghostPrefab;
 
     private BulletPool _bulletPool;
 
     private List<BulletController> _bulletsFired;
+    private List<GameObject> _ghosts;
 
     void Awake()
     {
@@ -51,9 +55,19 @@ public class ShotsStack : MonoBehaviour
         }
     }
 
-    public void AddShot(Vector2 direction, Vector2 position)
+    public void ShowGhosts()
     {
-        ShotInfo si = new ShotInfo(position, direction);
+        foreach (ShotInfo si in _shotStack)
+        {
+            GameObject newGhost = Instantiate(_ghostPrefab, si.PlayerPosition, Quaternion.identity);
+
+            _ghosts.Add(newGhost);
+        }
+    }
+
+    public void AddShot(Vector2 direction, Vector2 position, Vector2 playerPos)
+    {
+        ShotInfo si = new ShotInfo(position, direction, playerPos);
         _shotStack.Add(si);
     }
 

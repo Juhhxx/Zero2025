@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -64,7 +65,7 @@ public class TurnController : Controller<TurnController>
         // Subscribe to OnShootingInputEvent for every player
         foreach (PlayerController player in players)
         {
-            player.OnShootingInputEvent += (shotDirection, spawnPosition) => CheckPlayersReady();
+            player.OnShootingInputEvent += (shotDirection, spawnPosition, playerPos) => CheckPlayersReady();
         }
 
         // Initialize playersReadyAmount
