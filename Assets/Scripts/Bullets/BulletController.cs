@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour
     [SerializeField] private GameObject _ghostBullet;
     [SerializeField] private GameObject _materializedBullet;
     [SerializeField] private int _passesNeeded;
-    private int _passes;
+    [SerializeField] private int _passes;
     public bool activated;
 
     [SerializeField, ReadOnly] private bool _isMaterialized = false;
@@ -49,8 +49,9 @@ public class BulletController : MonoBehaviour
     {
         _passes++;
 
-        if (_passes == _passesNeeded && activated)
-        {   
+        if (_passes >= _passesNeeded && activated && !_isMaterialized)
+        {
+            _passes = 0;
             _isMaterialized = true;
         }
     }
