@@ -12,6 +12,7 @@ public class TurnController : Controller<TurnController>
     public List<PlayerController> players;
     public List<Vector3> playerStartPositions;
     public List<DetectBulletHit> playerHits;
+    public List<GameObject> playerAimPreviews;
 
     [Header("Timer Variables")]
     public float dodgingPhaseDuration;
@@ -44,6 +45,12 @@ public class TurnController : Controller<TurnController>
         foreach (PlayerController player in players)
         {
             playerStartPositions.Add(player.transform.position);
+        }
+
+        // Register the players' aim preview
+        foreach (PlayerController player in players)
+        {
+            playerAimPreviews.Add(player.gameObject.GetComponentInChildren<TAG_AimPivot>().gameObject);
         }
 
         // Register the players' hit boxes
@@ -95,6 +102,12 @@ public class TurnController : Controller<TurnController>
     {
         // set _isDodgingPhaseActive to false
         _isDodgingPhaseActive = false;
+
+        // enable player aim previews
+        foreach(GameObject aimPreview in playerAimPreviews)
+        {
+            aimPreview.SetActive(true);
+        }
 
         // increment dodgingPhaseDuration and update timer accordingly
         dodgingPhaseDuration++;
@@ -162,7 +175,7 @@ public class TurnController : Controller<TurnController>
 
         // disable previous rounds ghosts
         shotsStack.DeleteGhosts();
-        
+
         // set _isDodgingPhaseActive to true, which starts the phase timer
         _isDodgingPhaseActive = true;
 
@@ -170,6 +183,12 @@ public class TurnController : Controller<TurnController>
         foreach (PlayerController player in players)
         {
             player.AllowMovement = true;
+        }
+
+        // disable player aim previews
+        foreach(GameObject aimPreview in playerAimPreviews)
+        {
+            aimPreview.SetActive(false);
         }
 
         // shoot all bullets

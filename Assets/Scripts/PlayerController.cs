@@ -111,4 +111,9 @@ public class PlayerController : MonoBehaviour
             _hasBullet = false;
         }
     }
+
+    public void setAimPreviewState(bool newState)
+    {
+        _aimPivot.gameObject.SetActive(newState);
+    }
 }

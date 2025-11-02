@@ -375,6 +375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6625482808740547268}
+  - component: {fileID: 4863002000114624296}
   m_Layer: 0
   m_Name: Aim Indicator Pivot
   m_TagString: Untagged
@@ -398,6 +399,18 @@ Transform:
   - {fileID: 2227256663284302097}
   m_Father: {fileID: 5463986154043135700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4863002000114624296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538789283841082309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd2684ba562da84190e4dcc2aa13a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AimPivot
 --- !u!1 &8194772601220815642
 GameObject:
   m_ObjectHideFlags: 0
