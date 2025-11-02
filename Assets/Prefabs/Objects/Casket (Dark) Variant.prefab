@@ -13,12 +13,20 @@ PrefabInstance:
       value: Casket (Dark) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5443543659086664481, guid: be48dfa690ac6af42aa4c944dbe1f758, type: 3}
+      propertyPath: m_Size.x
+      value: 33.68421
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443543659086664481, guid: be48dfa690ac6af42aa4c944dbe1f758, type: 3}
+      propertyPath: m_Size.y
+      value: 62.105263
+      objectReference: {fileID: 0}
+    - target: {fileID: 5443543659086664481, guid: be48dfa690ac6af42aa4c944dbe1f758, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
+      value: 33.68421
       objectReference: {fileID: 0}
     - target: {fileID: 5443543659086664481, guid: be48dfa690ac6af42aa4c944dbe1f758, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.59
+      value: 62.105263
       objectReference: {fileID: 0}
     - target: {fileID: 6409931089149412897, guid: be48dfa690ac6af42aa4c944dbe1f758, type: 3}
       propertyPath: m_Sprite
