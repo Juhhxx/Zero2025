@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : Controller<SceneController>
@@ -9,6 +10,6 @@ public class SceneController : Controller<SceneController>
 
     public void loadGameScene()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(Random.Range(1,SceneManager.sceneCountInBuildSettings));
     }
 }
