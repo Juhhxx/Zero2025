@@ -214,6 +214,11 @@ MonoBehaviour:
   _players:
   - {fileID: 74158420}
   - {fileID: 1161374117}
+--- !u!1 &204423369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3394302292272875380, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &269650751
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &422678327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7711683694533224381, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &522417298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -625,6 +635,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 636275038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &799107014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8292827673265478509, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &921180574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1159,11 @@ Transform:
   - {fileID: 522417299}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1993359505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4240791492389360086, guid: 78c5d5ddd9df7c3409bd5eafb1c6a20a, type: 3}
+  m_PrefabInstance: {fileID: 3911874476254798988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2004986709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1230,9 +1250,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1535179408}
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player1Score1
+      value: 
+      objectReference: {fileID: 1993359505}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player1Score2
+      value: 
+      objectReference: {fileID: 204423369}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player2Score1
+      value: 
+      objectReference: {fileID: 422678327}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player2Score2
+      value: 
+      objectReference: {fileID: 799107014}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: victoryMessage
       value: 
       objectReference: {fileID: 998183808}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player1ScoreObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: player2ScoreObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: 'player1ScoreObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1993359505}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: 'player1ScoreObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 204423369}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: 'player2ScoreObjects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 422678327}
+    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
+      propertyPath: 'player2ScoreObjects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 799107014}
     - target: {fileID: 7899406571033756040, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: m_Name
       value: Score Controller
