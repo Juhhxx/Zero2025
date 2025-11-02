@@ -71,6 +71,7 @@ public class BulletPreview : MonoBehaviour
     {
         if (_bounces == _maxBounces && _maxBounces > 0)
         {
+            _rb.linearVelocity = Vector2.zero;
             return;
         } 
         

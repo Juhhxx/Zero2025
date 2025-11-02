@@ -300,9 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9eebbc99e825e94aba32774574be795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletPreview
-  _previewTime: 0.5
+  _previewTime: 1
   _collider: {fileID: 4888980499734508265}
   _passesNeeded: 1
   _isMaterialized: 0
-  _speed: 1000
-  _maxBounces: 0
+  _speed: 500
+  _maxBounces: 1
