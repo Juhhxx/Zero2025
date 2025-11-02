@@ -117,6 +117,7 @@ public class TurnController : Controller<TurnController>
         shotsStack.ClearBullets();
 
         // summon previous player ghosts
+        shotsStack.ShowGhosts();
 
         // enable current bullet preview
 
@@ -159,6 +160,9 @@ public class TurnController : Controller<TurnController>
         // reset playersReadyAmount
         playersReadyAmount = 0;
 
+        // disable previous rounds ghosts
+        shotsStack.DeleteGhosts();
+        
         // set _isDodgingPhaseActive to true, which starts the phase timer
         _isDodgingPhaseActive = true;
 
