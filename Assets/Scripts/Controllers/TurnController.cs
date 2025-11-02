@@ -120,10 +120,11 @@ public class TurnController : Controller<TurnController>
         timerText.text = "" + dodgingPhaseDuration;
         timerFillArea.fillAmount = 1f;
 
-        // disable player movement
+        // disable player movement and enable bullet previews
         foreach (PlayerController player in players)
         {
             player.AllowMovement = false;
+            player.SetShowPreview(true);
         }
 
         // clear bullets from screen
