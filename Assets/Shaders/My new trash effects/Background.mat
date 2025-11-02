@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ClockTimerVignette
-  m_Shader: {fileID: -6465566751694194690, guid: b1ac1a0fb5b71594298114f0d760cf74, type: 3}
+  m_Name: Background
+  m_Shader: {fileID: -6465566751694194690, guid: be7b80f960c5b494cb04aebb3fe110af, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,12 +37,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Bit_Rate: 120
-    - _Swirling_Speed: 0.05
-    - _Vignette_Intensity: 1.21
+    - _Bit_rate: 188
+    - _Swirling_speed: 0.08
+    - _Vignette_Intesnity: 0.904
     m_Colors:
-    - _Color: {r: 0, g: 0.1254902, b: 0.10508337, a: 1}
-    - _Color1: {r: 0, g: 0.8037735, b: 0.24533705, a: 1}
-    - _Color2: {r: 0, g: 0.018418312, b: 0.25, a: 1}
+    - _Color_Background: {r: 0, g: 0.55937356, b: 2.432384, a: 1}
+    - _Color_Balls: {r: 1.5815618, g: 0, b: 1.1841012, a: 1}
+    - _Scroll_Speed: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
+--- !u!114 &4943801051150728206
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
