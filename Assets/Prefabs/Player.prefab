@@ -442,6 +442,8 @@ MonoBehaviour:
   _playerAnim: {fileID: 894418131520687399}
   _gunAnim: {fileID: 6023166443937247509}
   _showPreview: 1
+  _stepClips: {fileID: 6418180475301049370, guid: 77d3c9289e7263d41b52438bcf4b26c4, type: 2}
+  _hurtClips: {fileID: 6418180475301049370, guid: 14249b38097bc46449bd485db0ae31ba, type: 2}
 --- !u!95 &894418131520687399
 Animator:
   serializedVersion: 7

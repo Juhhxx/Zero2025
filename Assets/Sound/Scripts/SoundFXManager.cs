@@ -31,6 +31,7 @@ public class SoundFXManager : MonoBehaviour
 
     public void PlaySoundFXResource(AudioResource audioResource, Transform spawnTransform, float volume, float length)
     {
+        Debug.Log(spawnTransform.name);
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.resource = audioResource;
