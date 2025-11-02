@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviour
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
             OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position, transform.position);
             _hasBullet = false;
+            SetShowPreview(false);
         }
     }
 
