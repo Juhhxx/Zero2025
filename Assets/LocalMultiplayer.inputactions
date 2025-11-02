@@ -25,6 +25,24 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "KeyboardAimRight",
+                    "type": "Button",
+                    "id": "a5e10d01-3d65-41e4-9766-2d35f0281057",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "KeyboardAimLeft",
+                    "type": "Button",
+                    "id": "fb9b8773-2dbf-4929-a058-636178360991",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Shoot",
                     "type": "Button",
                     "id": "c32c83fe-4ba0-4c87-ad00-c26551c886e6",
@@ -180,12 +198,67 @@
                 },
                 {
                     "name": "",
+                    "id": "5410c6a2-3b4f-49a9-8b78-d2a172f56380",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Arrows",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d55be436-5e99-4cb7-9bba-8f067386f48d",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a20c9f6-d4c5-4c3a-b172-a197f6865004",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";WASD",
+                    "action": "KeyboardAimRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6951b893-3e15-444e-aba5-002e29e618fd",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Arrows",
+                    "action": "KeyboardAimRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a090e6e8-f40b-446a-bbcc-1155acfcaa81",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";WASD",
+                    "action": "KeyboardAimLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d84c1ab0-a361-480c-9381-1ff36d1df4c3",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Arrows",
+                    "action": "KeyboardAimLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

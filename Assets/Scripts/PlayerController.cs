@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
         } 
     }
     private bool _hasBullet = true;
+    private bool _keyboardAimRight = false;
+    private bool _keyboardAimLeft = false;
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
@@ -42,19 +45,50 @@ public class PlayerController : MonoBehaviour
         if (_allowMovement) _rb.linearVelocity = _moveInput * _moveSpeed;
         else _rb.linearVelocity = Vector2.zero; //prevents residual speed from carrying over to aiming phase
         PointInAimDirection();
+        KeyboardAim();
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        if(_allowMovement)
-        {
-            _moveInput = context.ReadValue<Vector2>();
-        }
+        
+        _moveInput = context.ReadValue<Vector2>();
+        
     }
 
     public void Aim(InputAction.CallbackContext context)
     {
         _aimDirection = context.ReadValue<Vector2>();
+    }
+
+    public void KeyboardAimLeft(InputAction.CallbackContext context)
+    {
+        if(!_allowMovement)
+        {
+            if (context.performed)
+                _keyboardAimLeft = true;
+            if (context.canceled)
+                _keyboardAimLeft = false;
+        }
+    }
+
+    public void KeyboardAimRight(InputAction.CallbackContext context)
+    {
+        if(!_allowMovement)
+        {
+            if (context.performed)
+                _keyboardAimRight = true;
+            if (context.canceled)
+                _keyboardAimRight = false;
+        }
+        
+    }
+
+    private void KeyboardAim()
+    {
+        if (_keyboardAimRight)
+            _aimPivot.Rotate(new Vector3(0, 0, -3));
+        if (_keyboardAimLeft)
+            _aimPivot.Rotate(new Vector3(0, 0, 3));
     }
 
     private void PointInAimDirection()
