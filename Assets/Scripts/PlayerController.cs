@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
@@ -32,8 +33,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb; 
     private Vector2 _moveInput;
     private Vector2 _aimDirection;
-
     [SerializeField] private bool _showPreview;
+
+    [Header("Audio")]
+    [SerializeField] private AudioResource _stepClips;
+    [SerializeField] private AudioResource _hurtClips;
+
     public void SetShowPreview(bool set)
     {
         _showPreview = set;
@@ -53,7 +58,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(_rb.name);
         _calculatePreview = new Timer(0.1f);
         _calculatePreview.OnTimerDone += CalculatePreview;
-
+        GetComponentInChildren<DetectBulletHit>().OnHitEvent += PlayHurtSFX;
         detectBulletHit = GetComponentInChildren<DetectBulletHit>();
         detectBulletHit.OnHitEvent +=  () =>_playerAnim.SetTrigger("Death");
     }
@@ -192,4 +197,17 @@ public class PlayerController : MonoBehaviour
         _keyboardAimLeft = false;
 
     }
+
+    #region Audio
+    private void PlayHurtSFX()
+    {
+        SoundFXManager.instance.PlaySoundFXResource(_hurtClips, transform, 1f, 0.580f);
+    }
+
+    public void PlayStepSFX()
+    {
+        Debug.Log(transform.name);
+        SoundFXManager.instance.PlaySoundFXResource(_stepClips, transform, 1f, 0.420f);
+    }
+    #endregion
 }

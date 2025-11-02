@@ -47,9 +47,12 @@ MonoBehaviour:
   players: []
   playerStartPositions: []
   playerHits: []
+  playerAimPreviews: []
   dodgingPhaseDuration: 4
   timerText: {fileID: 0}
   timerFillArea: {fileID: 0}
   currentRoundText: {fileID: 0}
   countdownText: {fileID: 0}
   shotsStack: {fileID: 0}
+  _gunshotClip: {fileID: 8300000, guid: 1a3182939336e4847869f734f55e6ca6, type: 3}
+  _tickingClip: {fileID: 8300000, guid: 6659f60a9f488a14abb8fc1c89812f9a, type: 3}
