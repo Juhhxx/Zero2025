@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: feb05eb6a424d7443b03d2b3d1c58dcd
+guid: 58f3ca6cd35ebb649a2ad72e4d17295f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5644484791177534912
-    second: ClockTimer_0
+      213: 2253797984910211265
+    second: P1_walking_Sheet_0
   - first:
-      213: -469158189382365440
-    second: ClockTimer_1
+      213: -4445432467162809657
+    second: P1_walking_Sheet_1
   - first:
-      213: -7760597096923406408
-    second: ClockTimer_2
+      213: 5758008538665663027
+    second: P1_walking_Sheet_2
+  - first:
+      213: 7020384458342833179
+    second: P1_walking_Sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ClockTimer_0
+      name: P1_walking_Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 35
-        width: 12
-        height: 15
+        y: 0
+        width: 31
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cd5b36030d355e40800000000000000
-      internalID: 5644484791177534912
+      spriteID: 1c8701e7359174f10800000000000000
+      internalID: 2253797984910211265
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ClockTimer_1
+      name: P1_walking_Sheet_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 5
-        width: 56
-        height: 66
+        x: 37
+        y: 4
+        width: 32
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00f066acc173d79f0800000000000000
-      internalID: -469158189382365440
+      spriteID: 7cab5c959b6ae42c0800000000000000
+      internalID: -4445432467162809657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ClockTimer_2
+      name: P1_walking_Sheet_2
       rect:
         serializedVersion: 2
-        x: 52
-        y: 35
-        width: 12
-        height: 15
+        x: 72
+        y: 0
+        width: 28
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +181,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8bfd3f8ce02dc4490800000000000000
-      internalID: -7760597096923406408
+      spriteID: 33a35d8324e88ef40800000000000000
+      internalID: 5758008538665663027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P1_walking_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c9232287a6d6160800000000000000
+      internalID: 7020384458342833179
       vertices: []
       indices: 
       edges: []
@@ -198,9 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ClockTimer_0: 5644484791177534912
-      ClockTimer_1: -469158189382365440
-      ClockTimer_2: -7760597096923406408
+      P1_walking_Sheet_0: 2253797984910211265
+      P1_walking_Sheet_1: -4445432467162809657
+      P1_walking_Sheet_2: 5758008538665663027
+      P1_walking_Sheet_3: 7020384458342833179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
