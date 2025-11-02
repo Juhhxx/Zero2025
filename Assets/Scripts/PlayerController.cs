@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _aimDirection;
 
     [SerializeField] private bool _showPreview;
-    public void SetShowpreviw(bool set)
+    public void SetShowPreview(bool set)
     {
         _showPreview = set;
         
@@ -139,9 +139,8 @@ public class PlayerController : MonoBehaviour
                 Quaternion targetRotation = Quaternion.LookRotation(transform.forward, _aimDirection);
                 Quaternion rotation = Quaternion.RotateTowards(_aimPivot.rotation, targetRotation, 100f * Time.deltaTime);
                 _aimPivot.rotation = rotation;
-            }            
+            }
         }
-
     }
 
     public void Shoot(InputAction.CallbackContext context)
