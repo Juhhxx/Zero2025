@@ -34,7 +34,8 @@ public class TurnController : Controller<TurnController>
     [Header("Audio")]
     [SerializeField] private AudioClip _gunshotClip;
     [SerializeField] private AudioClip _tickingClip;
-    private bool hasPlayedTicking = false;
+    private bool _hasPlayedTicking = false;
+    private AudioSource _tickingSource = null;
 
     public UnityEvent OnBeginPlanningPhase;
     public UnityEvent OnBeginDodgingPhase;
@@ -105,14 +106,14 @@ public class TurnController : Controller<TurnController>
             timerText.text = "" + (int)dodgingPhaseTimer.CurrentTime;
             timerFillArea.fillAmount = dodgingPhaseTimer.CurrentTime / dodgingPhaseDuration;
 
-            if (dodgingPhaseTimer.CurrentTime < 5f && !hasPlayedTicking)
+            if (dodgingPhaseTimer.CurrentTime < 5f && !_hasPlayedTicking)
             {
-                hasPlayedTicking = true;
-                SoundFXManager.instance.PlaySoundFXClip(_tickingClip, transform, 3f);
+                _hasPlayedTicking = true;
+                _tickingSource = SoundFXManager.instance.PlayAndReturnSoundFXClip(_tickingClip, transform, 3f);
             }
         } else
         {
-            hasPlayedTicking = false;
+            _hasPlayedTicking = false;
         }
     }
 
@@ -120,6 +121,7 @@ public class TurnController : Controller<TurnController>
     {
         // set _isDodgingPhaseActive to false
         _isDodgingPhaseActive = false;
+        if (_tickingSource != null) Destroy(_tickingSource.gameObject);
 
         // enable player aim previews
         foreach(GameObject aimPreview in playerAimPreviews)
