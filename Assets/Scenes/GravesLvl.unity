@@ -3089,7 +3089,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3232,19 +3232,19 @@ PrefabInstance:
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: 'player1ScoreObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 1993359505}
+      objectReference: {fileID: 204423369}
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: 'player1ScoreObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 204423369}
+      objectReference: {fileID: 1993359505}
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: 'player2ScoreObjects.Array.data[0]'
       value: 
-      objectReference: {fileID: 422678327}
+      objectReference: {fileID: 799107014}
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: 'player2ScoreObjects.Array.data[1]'
       value: 
-      objectReference: {fileID: 799107014}
+      objectReference: {fileID: 422678327}
     - target: {fileID: 7899406571033756040, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: m_Name
       value: Score Controller

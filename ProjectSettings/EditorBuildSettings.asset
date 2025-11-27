@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Main Menu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 7068d099d78e06f4e83908940daa1fee
   - enabled: 1
     path: Assets/Scenes/CoffinsLvl.unity
