@@ -23,6 +23,9 @@ public class TurnController : Controller<TurnController>
     public TextMeshProUGUI currentRoundText;
     public TextMeshProUGUI countdownText;
 
+    [Header("UI")]
+    [SerializeField] private GameObject pauseButton;
+
     [Header("Bullet Variables")]
     public ShotsStack shotsStack;
 
@@ -160,6 +163,9 @@ public class TurnController : Controller<TurnController>
         _currentTurn++;
         currentRoundText.text = "Current Round: " + _currentTurn.ToString();
 
+        // enable pause button
+        pauseButton.SetActive(true);
+
         OnBeginPlanningPhase.Invoke();
 
         Debug.Log("Started Setup phase");
@@ -175,6 +181,9 @@ public class TurnController : Controller<TurnController>
 
     private IEnumerator CountdownToDodgingPhase()
     {
+        // disable pause button
+        pauseButton.SetActive(false);
+
         countdownText.gameObject.SetActive(true);
         int countdown = 3;
 

@@ -5,7 +5,7 @@ public class SceneController : Controller<SceneController>
 {
     public void loadMainMenuScene()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void loadGameScene()
