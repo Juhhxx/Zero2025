@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.Events;
+using System;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -50,6 +51,9 @@ public class TurnController : Controller<TurnController>
 
         // Find all players in the scene
         players = FindObjectsByType<PlayerController>(FindObjectsSortMode.None).ToList();
+
+        // Sort the list alphabetically
+        players.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.OrdinalIgnoreCase));
 
         // Find the shots stack
         shotsStack = FindFirstObjectByType<ShotsStack>();
