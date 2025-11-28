@@ -7,6 +7,8 @@ public class BulletController : MonoBehaviour
     [SerializeField] private Collider2D _collider;
     [SerializeField] private GameObject _ghostBullet;
     [SerializeField] private GameObject _materializedBullet;
+    [SerializeField] private GameObject _eyeBuildUpEffect;
+    [SerializeField] private GameObject _wallDivingEffect;
     [SerializeField] private int _passesNeeded;
     [SerializeField] private int _passes;
     public bool activated;
@@ -53,12 +55,14 @@ public class BulletController : MonoBehaviour
         {
             _passes = 0;
             _isMaterialized = true;
+            _eyeBuildUpEffect.SetActive(true);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {   
         //Activate diving particle system
+        _wallDivingEffect.SetActive(true);
     }
 
     public void KillBullet()
@@ -76,6 +80,8 @@ public class BulletController : MonoBehaviour
         _isMaterialized = false;
         _passes = 0;
         _collider.isTrigger = true;
+        _eyeBuildUpEffect.SetActive(false);
+        _wallDivingEffect.SetActive(false);
     }
     
     public bool getIsMaterialized()

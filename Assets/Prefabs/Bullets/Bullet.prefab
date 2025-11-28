@@ -247,7 +247,11 @@ MonoBehaviour:
   _collider: {fileID: 5894426444813392979}
   _ghostBullet: {fileID: 3655940021352812386}
   _materializedBullet: {fileID: 3381977370414150487}
+  _eyeBuildUpEffect: {fileID: 3009260253024750539}
+  _wallDivingEffect: {fileID: 7376963359273997122}
   _passesNeeded: 1
+  _passes: 0
+  activated: 0
   _isMaterialized: 0
   OnBulletKill:
     m_PersistentCalls:
@@ -10047,7 +10051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1982212836789860938
 Transform:
   m_ObjectHideFlags: 0
@@ -20096,7 +20100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6244038994944495900
 Transform:
   m_ObjectHideFlags: 0
@@ -35311,7 +35315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1311675121415750687
 Transform:
   m_ObjectHideFlags: 0

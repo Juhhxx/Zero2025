@@ -227,7 +227,6 @@ public class TurnController : Controller<TurnController>
         foreach(GameObject aimPreview in playerAimPreviews)
         {
             aimPreview.SetActive(false);
-            Debug.Log("Disabled: " + aimPreview.name);
         }
 
         // shoot all bullets
