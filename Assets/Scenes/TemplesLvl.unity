@@ -3963,14 +3963,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1535179408}
     - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
-      propertyPath: _gameEndClip
-      value: 
-      objectReference: {fileID: 6418180475301049370, guid: e3d44741fd8c61d488b8ebc3316ff32d, type: 2}
-    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
-      propertyPath: _turnEndClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ab9807ce10c57fd4a924e7d7ff0899f9, type: 3}
-    - target: {fileID: 7744273773570893265, guid: 4c2c3387d6caa014d96762c0a0821d7f, type: 3}
       propertyPath: player1Score1
       value: 
       objectReference: {fileID: 1993359505}

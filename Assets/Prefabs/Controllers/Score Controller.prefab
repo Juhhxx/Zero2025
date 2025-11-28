@@ -44,8 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c35a3a6aed7434b9abdc2c56a79c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreController
-  player1Score: 0
-  player2Score: 0
   winningPlayer: 
   endScreen: {fileID: 0}
   victoryMessage: {fileID: 0}
+  _turnEndClip: {fileID: 8300000, guid: ab9807ce10c57fd4a924e7d7ff0899f9, type: 3}
+  _gameEndClip: {fileID: 6418180475301049370, guid: e3d44741fd8c61d488b8ebc3316ff32d, type: 2}
+  player1Score: 0
+  player1ScoreObjects: []
+  player2Score: 0
+  player2ScoreObjects: []
