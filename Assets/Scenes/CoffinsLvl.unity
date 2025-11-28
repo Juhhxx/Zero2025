@@ -4711,6 +4711,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 165348570}
     m_Modifications:
+    - target: {fileID: 381129954896537024, guid: 9b2397e0c37cae148b6e9a1968d34b98, type: 3}
+      propertyPath: _pauseMenu
+      value: 
+      objectReference: {fileID: 3911874476254798989}
     - target: {fileID: 3795616309013592348, guid: 9b2397e0c37cae148b6e9a1968d34b98, type: 3}
       propertyPath: m_Name
       value: Pause Controller

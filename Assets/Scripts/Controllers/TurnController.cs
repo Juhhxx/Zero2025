@@ -130,7 +130,7 @@ public class TurnController : Controller<TurnController>
     }
 
     public void StartSetupPhase()
-    {
+    {   
         // set _isDodgingPhaseActive to false
         _isDodgingPhaseActive = false;
         if (_tickingSource != null) Destroy(_tickingSource.gameObject);
@@ -172,14 +172,15 @@ public class TurnController : Controller<TurnController>
         // summon previous player ghosts
         shotsStack.ShowGhosts();
 
-        // enable current bullet preview
-
         // update current turn text
         _currentTurn++;
         currentRoundText.text = "Current Round: " + _currentTurn.ToString();
 
         // enable pause button
         pauseButton.SetActive(true);
+
+        // enable pausing
+        PauseController.Instance.canPause = true;
 
         OnBeginPlanningPhase.Invoke();
 
@@ -198,6 +199,9 @@ public class TurnController : Controller<TurnController>
     {
         // Disable pause button
         pauseButton.SetActive(false);
+
+        // Disable pausing
+        PauseController.Instance.canPause = false;
 
         // Activate countdown timer display
         countdownText.gameObject.SetActive(true);

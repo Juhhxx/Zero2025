@@ -125,6 +125,11 @@ public class PlayerController : MonoBehaviour
         if(!PauseController.Instance.isPaused) _aimDirection = context.ReadValue<Vector2>();
     }
 
+    public void Pause(InputAction.CallbackContext context)
+    {   
+        PauseController.Instance.TogglePause();
+    }
+
     public void KeyboardAimLeft(InputAction.CallbackContext context)
     {
         if(!_allowMovement)
