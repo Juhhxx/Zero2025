@@ -55,7 +55,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        Debug.Log(_rb.name);
         _calculatePreview = new Timer(0.1f);
         _calculatePreview.OnTimerDone += CalculatePreview;
         GetComponentInChildren<DetectBulletHit>().OnHitEvent += PlayHurtSFX;
@@ -188,6 +187,7 @@ public class PlayerController : MonoBehaviour
     public void setAimPreviewState(bool newState)
     {
         _aimPivot.gameObject.SetActive(newState);
+        Debug.Log("Set " + gameObject.name + " gun to " + newState);
     }
 
     // Resets aiming input (called when entering an aim phase)
@@ -206,7 +206,6 @@ public class PlayerController : MonoBehaviour
 
     public void PlayStepSFX()
     {
-        Debug.Log(transform.name);
         SoundFXManager.instance.PlaySoundFXResource(_stepClips, transform, 1f, 0.420f);
     }
     #endregion

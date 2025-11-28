@@ -9,17 +9,17 @@ public class PlayerInputManager : MonoBehaviour
     void Start()
     {
         var pads = Gamepad.all;
-        Debug.Log(pads.Count);
+        Debug.Log("Gamepad Amount: " + pads.Count);
 
         if (pads.Count == 0)
         {
-            Debug.LogError("Did not find, falling back to keyboard");
+            Debug.LogWarning("Did not find, falling back to keyboard");
             _player1.SwitchCurrentControlScheme("WASD", Keyboard.current);
             _player2.SwitchCurrentControlScheme("Arrows", Keyboard.current);
         }
         else if (pads.Count == 1)
         {
-            Debug.LogError("Only one controller found, P1 uses controller, P2 can move with WASD");
+            Debug.LogWarning("Only one controller found, P1 uses controller, P2 can move with WASD");
             _player1.SwitchCurrentControlScheme("Gamepad", pads[0]);
             _player2.SwitchCurrentControlScheme("WASD", Keyboard.current);
         }else

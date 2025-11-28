@@ -7,7 +7,6 @@ public class DetectBulletHit : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.name);
         if (other.GetComponent<BulletController>()!=null)
         {   
             // if the bullet is materialized, register a hit

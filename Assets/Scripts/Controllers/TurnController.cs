@@ -67,7 +67,7 @@ public class TurnController : Controller<TurnController>
         // Register the players' aim preview
         foreach (PlayerController player in players)
         {
-            playerAimPreviews.Add(player.gameObject.GetComponentInChildren<TAG_AimPivot>().gameObject);
+            playerAimPreviews.Add(player.gameObject.GetComponentInChildren<TAG_AimPivot>().gameObject.GetComponentInChildren<SpriteRenderer>().gameObject);
         }
 
         // Register the players' hit boxes

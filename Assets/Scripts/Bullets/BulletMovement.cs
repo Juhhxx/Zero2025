@@ -17,7 +17,6 @@ public class BulletMovement : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("SPAWNED BULLET");
         _rb = GetComponent<Rigidbody2D>();
         _controller = GetComponent<BulletController>();
 

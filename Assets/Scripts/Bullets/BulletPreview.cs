@@ -22,7 +22,6 @@ public class BulletPreview : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("SPAWNED BULLET PREVIEW");
         _rb = GetComponent<Rigidbody2D>();
         _stopTimer = new Timer(_previewTime, Timer.TimerReset.Manual);
         _stopTimer.OnTimerDone += () => _doLogic = false;

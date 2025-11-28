@@ -43,7 +43,6 @@ public class SoundFXManager : MonoBehaviour
 
     public void PlaySoundFXResource(AudioResource audioResource, Transform spawnTransform, float volume, float length)
     {
-        Debug.Log(spawnTransform.name);
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.resource = audioResource;
@@ -56,7 +55,6 @@ public class SoundFXManager : MonoBehaviour
     //This method returns the audioSource created so we have more control of when it can be disposed of
     public AudioSource PlayAndReturnFXResource(AudioResource audioResource, Transform spawnTransform, float volume)
     {
-        Debug.Log(spawnTransform.name);
         AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.resource = audioResource;
