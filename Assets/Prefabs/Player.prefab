@@ -441,6 +441,7 @@ MonoBehaviour:
   _bulletPreviewPrefab: {fileID: 1238147336273523164, guid: 6dc1a46cfc788ef42a7b0374c52c56f0, type: 3}
   _playerAnim: {fileID: 894418131520687399}
   _gunAnim: {fileID: 6023166443937247509}
+  _bulletSpawnPivotPosition: {fileID: 6625482808740547268}
   _showPreview: 1
   _stepClips: {fileID: 6418180475301049370, guid: 77d3c9289e7263d41b52438bcf4b26c4, type: 2}
   _hurtClips: {fileID: 6418180475301049370, guid: 14249b38097bc46449bd485db0ae31ba, type: 2}
@@ -925,14 +926,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7538789283841082309}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2227256663284302097}
   m_Father: {fileID: 5463986154043135700}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &4863002000114624296
 MonoBehaviour:
   m_ObjectHideFlags: 0

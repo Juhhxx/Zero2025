@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _bulletPreviewPrefab;
     [SerializeField] private Animator _playerAnim;
     [SerializeField] private Animator _gunAnim;
+    [SerializeField] private Transform _bulletSpawnPivotPosition;
+    private Quaternion _originalBulletSpawnPivotRotation;
     private bool _allowMovement = true;
     private DetectBulletHit detectBulletHit;
     public bool AllowMovement
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
         GetComponentInChildren<DetectBulletHit>().OnHitEvent += PlayHurtSFX;
         detectBulletHit = GetComponentInChildren<DetectBulletHit>();
         detectBulletHit.OnHitEvent +=  () =>_playerAnim.SetTrigger("Death");
+        _originalBulletSpawnPivotRotation = _bulletSpawnPivotPosition.rotation;
     }
 
     // Update is called once per frame
@@ -79,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     public void ShotAnimation() => _gunAnim.SetTrigger("Shot");
 
-    private void CalculatePreview()
+    public void CalculatePreview()
     {
         var temp = _aimPivot.rotation;
 
@@ -114,14 +117,12 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        
-        _moveInput = context.ReadValue<Vector2>();
-        
+        _moveInput = context.ReadValue<Vector2>();    
     }
 
     public void Aim(InputAction.CallbackContext context)
-    {        
-        _aimDirection = context.ReadValue<Vector2>();
+    {   
+        if(!PauseController.Instance.isPaused) _aimDirection = context.ReadValue<Vector2>();
     }
 
     public void KeyboardAimLeft(InputAction.CallbackContext context)
@@ -149,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
     private void KeyboardAim()
     {
-        if (_hasBullet)
+        if (_hasBullet && !PauseController.Instance.isPaused)
         {
             if (_keyboardAimRight)
                 _aimPivot.Rotate(new Vector3(0, 0, -90 * Time.deltaTime));
@@ -175,7 +176,7 @@ public class PlayerController : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if (context.performed && _hasBullet)
+        if (context.performed && _hasBullet && !PauseController.Instance.isPaused)
         {
             //                   Pivot Direction, Bullet Spawn Position
             Vector2 shotDirection = _aimPivot.rotation * Vector2.up;
@@ -198,6 +199,11 @@ public class PlayerController : MonoBehaviour
         _keyboardAimRight = false;
         _keyboardAimLeft = false;
 
+    }
+
+    public void resetBulletSpawnPointPivotPosition()
+    {
+        _bulletSpawnPivotPosition.rotation = _originalBulletSpawnPivotRotation;
     }
 
     #region Audio

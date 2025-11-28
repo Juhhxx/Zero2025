@@ -141,6 +141,12 @@ public class TurnController : Controller<TurnController>
             aimPreview.SetActive(true);
         }
 
+        // display bullet trajectory previews
+        foreach(PlayerController player in players)
+        {
+            player.CalculatePreview();
+        }
+
         // increment dodgingPhaseDuration and update timer accordingly
         dodgingPhaseDuration++;
         dodgingPhaseTimer.setNewMax(dodgingPhaseDuration);
@@ -190,9 +196,10 @@ public class TurnController : Controller<TurnController>
 
     private IEnumerator CountdownToDodgingPhase()
     {
-        // disable pause button
+        // Disable pause button
         pauseButton.SetActive(false);
 
+        // Activate countdown timer display
         countdownText.gameObject.SetActive(true);
         int countdown = 3;
 
@@ -245,6 +252,12 @@ public class TurnController : Controller<TurnController>
         for (int i = 0; i < players.Count; i++)
         {
             players[i].transform.position = playerStartPositions[i];
+        }
+
+        // reset player gun positions
+        foreach(PlayerController player in players)
+        {
+            player.resetBulletSpawnPointPivotPosition();
         }
 
         // delete all previews
