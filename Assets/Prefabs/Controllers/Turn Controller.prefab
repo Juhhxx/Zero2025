@@ -53,6 +53,16 @@ MonoBehaviour:
   timerFillArea: {fileID: 0}
   currentRoundText: {fileID: 0}
   countdownText: {fileID: 0}
+  pauseButton: {fileID: 0}
   shotsStack: {fileID: 0}
   _gunshotClip: {fileID: 8300000, guid: 1a3182939336e4847869f734f55e6ca6, type: 3}
   _tickingClip: {fileID: 8300000, guid: 6659f60a9f488a14abb8fc1c89812f9a, type: 3}
+  _dodgingPhaseEndClip: {fileID: 6418180475301049370, guid: 899bbff1cc9c0a44981ea42c93d9e2d5, type: 2}
+  _dodgingPhaseCountdownClip: {fileID: 8300000, guid: 8ec5786fb793a78448f67541bcd21d09, type: 3}
+  _turnEndClip: {fileID: 8300000, guid: ab9807ce10c57fd4a924e7d7ff0899f9, type: 3}
+  OnBeginPlanningPhase:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeginDodgingPhase:
+    m_PersistentCalls:
+      m_Calls: []

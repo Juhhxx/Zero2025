@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioResource _stepClips;
     [SerializeField] private AudioResource _hurtClips;
+    [SerializeField] private AudioResource _gunReadyClips;
 
     public void SetShowPreview(bool set)
     {
@@ -181,6 +182,7 @@ public class PlayerController : MonoBehaviour
             OnShootingInputEvent?.Invoke(shotDirection, _bulletSpawnPoint.position, transform.position);
             _hasBullet = false;
             SetShowPreview(false);
+            PlayGunReadySFX();
         }
     }
 
@@ -207,6 +209,10 @@ public class PlayerController : MonoBehaviour
     public void PlayStepSFX()
     {
         SoundFXManager.instance.PlaySoundFXResource(_stepClips, transform, 1f, 0.420f);
+    }
+    public void PlayGunReadySFX()
+    {
+        SoundFXManager.instance.PlaySoundFXResource(_gunReadyClips, transform, 1f, 0.785f);
     }
     #endregion
 }

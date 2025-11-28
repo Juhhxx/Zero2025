@@ -7,6 +7,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine.Events;
 using System;
+using UnityEngine.Audio;
 
 public class TurnController : Controller<TurnController>
 {   
@@ -38,6 +39,8 @@ public class TurnController : Controller<TurnController>
     [Header("Audio")]
     [SerializeField] private AudioClip _gunshotClip;
     [SerializeField] private AudioClip _tickingClip;
+    [SerializeField] private AudioResource _dodgingPhaseEndClip;
+    [SerializeField] private AudioClip _dodgingPhaseCountdownClip;
     private bool _hasPlayedTicking = false;
     private AudioSource _tickingSource = null;
 
@@ -81,6 +84,7 @@ public class TurnController : Controller<TurnController>
 
         // Subscribe to the onTimerDone event
         dodgingPhaseTimer.OnTimerDone += StartSetupPhase;
+        dodgingPhaseTimer.OnTimerDone += PlayEndOfDodgingPhaseClip;
 
         // Subscribe to onHitEvent on player hit boxes, which ends the round in the opponents favour
         playerHits[0].OnHitEvent += () => EndTurn(1);
@@ -118,6 +122,7 @@ public class TurnController : Controller<TurnController>
                 _hasPlayedTicking = true;
                 _tickingSource = SoundFXManager.instance.PlayAndReturnSoundFXClip(_tickingClip, transform, 3f);
             }
+
         } else
         {
             _hasPlayedTicking = false;
@@ -195,6 +200,7 @@ public class TurnController : Controller<TurnController>
         while (countdown > 0)
         {
             countdownText.text = countdown.ToString();
+            SoundFXManager.instance.PlaySoundFXClip(_dodgingPhaseCountdownClip, transform, 1f);
             yield return new WaitForSeconds(1f);
             countdown--;
         }
@@ -251,8 +257,6 @@ public class TurnController : Controller<TurnController>
         _currentTurn = 0;
         currentRoundText.text = "Current Round: " + _currentTurn.ToString();
 
-        Debug.Log("Ended round. " + winningPlayer + " scored");
-
         // reset dodgingPhaseDuration
         dodgingPhaseDuration = 4;
 
@@ -263,9 +267,14 @@ public class TurnController : Controller<TurnController>
     public void disableAimPreviews()
     {
         // disable player aim previews
-        foreach(GameObject aimPreview in playerAimPreviews)
+        foreach (GameObject aimPreview in playerAimPreviews)
         {
             aimPreview.SetActive(false);
         }
+    }
+    
+    private void PlayEndOfDodgingPhaseClip()
+    {
+        SoundFXManager.instance.PlaySoundFXResource(_dodgingPhaseEndClip, transform, 5f, 1.776f);
     }
 }
