@@ -216,17 +216,12 @@ public class TurnController : Controller<TurnController>
         // set _isDodgingPhaseActive to true, which starts the phase timer
         _isDodgingPhaseActive = true;
 
-        // enable player movement and disable shot previews
+        // enable player movement, disable shot previews and do the shoot animation
         foreach (PlayerController player in players)
         {
             player.AllowMovement = true;
             player.SetShowPreview(false);
-        }
-
-        // disable player aim previews
-        foreach(GameObject aimPreview in playerAimPreviews)
-        {
-            aimPreview.SetActive(false);
+            player.ShotAnimation();
         }
 
         // shoot all bullets
@@ -263,5 +258,14 @@ public class TurnController : Controller<TurnController>
 
         // start setup phase
         StartSetupPhase();
+    }
+
+    public void disableAimPreviews()
+    {
+        // disable player aim previews
+        foreach(GameObject aimPreview in playerAimPreviews)
+        {
+            aimPreview.SetActive(false);
+        }
     }
 }

@@ -30,10 +30,8 @@ AnimationClip:
       value: {fileID: 1397831849887301694, guid: 62f5edb98e778694cb0d9cb737f0168e, type: 3}
     - time: 0.25
       value: {fileID: -5170273188526166238, guid: 62f5edb98e778694cb0d9cb737f0168e, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: 99e5d180080c96940a65c6d906ff9131, type: 3}
     attribute: m_Sprite
-    path: Aim Indicator Pivot/Aim Direction
+    path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -45,7 +43,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1435734034
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -59,13 +57,12 @@ AnimationClip:
     - {fileID: -1637406202924835916, guid: 62f5edb98e778694cb0d9cb737f0168e, type: 3}
     - {fileID: 1397831849887301694, guid: 62f5edb98e778694cb0d9cb737f0168e, type: 3}
     - {fileID: -5170273188526166238, guid: 62f5edb98e778694cb0d9cb737f0168e, type: 3}
-    - {fileID: 21300000, guid: 99e5d180080c96940a65c6d906ff9131, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0625
+    m_StopTime: 0.3125
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

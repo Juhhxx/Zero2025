@@ -118,6 +118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1311675121415750687}
   - {fileID: 7243827092412423697}
   - {fileID: 4649416590689686525}
   m_Father: {fileID: 0}
@@ -15167,7 +15168,6 @@ Transform:
   - {fileID: 6649032042273976741}
   - {fileID: 4628213799025360545}
   - {fileID: 6244038994944495900}
-  - {fileID: 1311675121415750687}
   - {fileID: 2309118245000633704}
   m_Father: {fileID: 560704268849115286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -35324,14 +35324,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7376963359273997122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -3.9, z: 0}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: -3.9000006, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 688068844825466139}
   - {fileID: 4016695263001985207}
-  m_Father: {fileID: 7243827092412423697}
+  m_Father: {fileID: 560704268849115286}
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: -90}
 --- !u!198 &3412339401705145713
 ParticleSystem:
